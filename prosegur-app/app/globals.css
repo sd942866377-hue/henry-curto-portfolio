@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-brand: var(--brand);
+  --color-brand-secondary: var(--brand-secondary);
+  --shadow-custom: var(--shadow-custom-val);
+}
+
+:root {
+  --background: #0a0a12;
+  --foreground: #ececf4;
+  --card: #111120;
+  --card-foreground: #ececf4;
+  --primary: #e30613;
+  --primary-foreground: #ffffff;
+  --secondary: #1a1a2e;
+  --secondary-foreground: #ececf4;
+  --muted: #1a1a2e;
+  --muted-foreground: #6b6b88;
+  --accent: #e30613;
+  --accent-foreground: #ffffff;
+  --destructive: #e30613;
+  --border: rgba(255 255 255 / 0.08);
+  --input: rgba(255 255 255 / 0.1);
+  --ring: #e30613;
+  --brand: oklch(0.55 0.22 25);
+  --brand-secondary: oklch(0.48 0.22 25);
+  --shadow-custom-val: 0px -1px 0px 0px hsla(0,0%,100%,0.06),
+    0px 0px 0px 1px hsla(0,0%,100%,0.06), 0px 0px 0px 1px #27272a,
+    0px 1px 2px 0px rgba(0,0,0,0.32), 0px 2px 4px 0px rgba(0,0,0,0.32);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: system-ui, sans-serif;
+}
