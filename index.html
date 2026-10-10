@@ -1,930 +1,610 @@
 <!DOCTYPE html>
-<html class="dark" lang="es">
+<html lang="es">
 <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <meta content="web_standard" name="shell-type"/>
-  <title>Apple (América Latina)</title>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
-  <style>
-    @layer base {
-      html {
-        scroll-behavior: smooth;
-      }
-      html, body {
-        margin: 0;
-        padding: 0;
-      }
-      body {
-        overscroll-behavior: none;
-      }
-      main > :first-child {
-        margin-top: 0 !important;
-      }
-      main > :last-child {
-        margin-bottom: 0 !important;
-      }
-    }
-    ::-webkit-scrollbar {
-      display: none;
-    }
-    .no-scrollbar::-webkit-scrollbar {
-      display: none;
-    }
-    .no-scrollbar {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
-  </style>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            "on-surface": "#e2e2e2",
-            "on-secondary-fixed-variant": "#46464b",
-            "inverse-surface": "#e2e2e2",
-            "on-secondary-fixed": "#1a1b1f",
-            "outline-variant": "#414753",
-            "on-tertiary-fixed": "#341000",
-            "on-tertiary": "#562000",
-            "surface": "#131313",
-            "surface-bright": "#393939",
-            "border-subtle": "rgba(255, 255, 255, 0.12)",
-            "surface-container-high": "#2a2a2a",
-            "secondary-container": "#46464b",
-            "inverse-primary": "#005cbb",
-            "surface-tile-light": "#F5F5F7",
-            "on-secondary-container": "#b5b4ba",
-            "text-primary": "#F5F5F7",
-            "surface-dim": "#131313",
-            "on-primary-container": "#fcfbff",
-            "on-primary-fixed": "#001b3f",
-            "error-container": "#93000a",
-            "primary-fixed-dim": "#abc7ff",
-            "background": "#131313",
-            "on-tertiary-fixed-variant": "#7a3000",
-            "on-surface-variant": "#c1c6d6",
-            "secondary": "#c7c6cb",
-            "tertiary-container": "#c25100",
-            "outline": "#8b919f",
-            "surface-container-highest": "#353535",
-            "primary-container": "#0071e3",
-            "text-secondary": "#86868B",
-            "inverse-on-surface": "#303030",
-            "tertiary-fixed": "#ffdbcb",
-            "primary-fixed": "#d7e2ff",
-            "error": "#ffb4ab",
-            "surface-tile-dark": "#0A0A0C",
-            "surface-tint": "#abc7ff",
-            "on-background": "#e2e2e2",
-            "on-error": "#690005",
-            "surface-container-low": "#1b1b1b",
-            "interactive-hover": "#0077ED",
-            "on-error-container": "#ffdad6",
-            "on-primary": "#002f66",
-            "surface-container": "#1f1f1f",
-            "surface-container-lowest": "#0e0e0e",
-            "on-primary-fixed-variant": "#00458f",
-            "secondary-fixed": "#e3e2e7",
-            "tertiary": "#ffb693",
-            "surface-variant": "#353535",
-            "nav-translucent": "rgba(0, 0, 0, 0.82)",
-            "primary": "#abc7ff",
-            "secondary-fixed-dim": "#c7c6cb",
-            "on-secondary": "#2f3034",
-            "tertiary-fixed-dim": "#ffb693",
-            "on-tertiary-container": "#fffaf9",
-            "surface-black": "#000000"
-          },
-          borderRadius: {
-            DEFAULT: "1rem",
-            lg: "2rem",
-            xl: "3rem",
-            full: "9999px"
-          },
-          spacing: {
-            "margin-desktop": "32px",
-            "space-sm": "8px",
-            "gutter": "12px",
-            "gutter-desktop": "16px",
-            "margin": "16px",
-            "space-xs": "4px",
-            "space-lg": "24px",
-            "space-md": "16px",
-            "space-xl": "48px"
-          },
-          fontFamily: {
-            "label-cta": ["Inter"],
-            "tagline-lg": ["Inter"],
-            "nav-link": ["Inter"],
-            "display-hero": ["Inter"],
-            "headline-tile": ["Inter"],
-            "caption-legal": ["Inter"],
-            "headline-tile-mobile": ["Inter"],
-            "body-standard": ["Inter"],
-            "display-hero-mobile": ["Inter"],
-            "tagline-sm": ["Inter"]
-          },
-          fontSize: {
-            "label-cta": ["14px", { lineHeight: "18px", letterSpacing: "-0.016em", fontWeight: "500" }],
-            "tagline-lg": ["24px", { lineHeight: "28px", letterSpacing: "-0.005em", fontWeight: "400" }],
-            "nav-link": ["12px", { lineHeight: "16px", letterSpacing: "-0.01em", fontWeight: "400" }],
-            "display-hero": ["56px", { lineHeight: "60px", letterSpacing: "-0.015em", fontWeight: "700" }],
-            "headline-tile": ["40px", { lineHeight: "44px", letterSpacing: "-0.011em", fontWeight: "700" }],
-            "caption-legal": ["12px", { lineHeight: "16px", letterSpacing: "-0.01em", fontWeight: "400" }],
-            "headline-tile-mobile": ["28px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "600" }],
-            "body-standard": ["17px", { lineHeight: "25px", letterSpacing: "-0.022em", fontWeight: "400" }],
-            "display-hero-mobile": ["36px", { lineHeight: "40px", letterSpacing: "-0.012em", fontWeight: "700" }],
-            "tagline-sm": ["19px", { lineHeight: "24px", letterSpacing: "-0.003em", fontWeight: "400" }]
-          }
-        }
-      }
-    };
-  </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Henry Curto · Portafolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0a; --bg-2: #111111; --card: #161616; --line: #262626;
+    --fg: #f5f5f5; --muted: #8a8a8a; --orange: #ff6a00; --orange-2: #ff8a3d;
+    --green: #22c55e;
+    --sans: 'Space Grotesk', system-ui, sans-serif; --mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--fg); font-family: var(--sans); overflow-x: hidden; }
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: var(--orange); color: #000; }
+
+  /* Nav */
+  .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; transition: background .3s, border-color .3s; border-bottom: 1px solid transparent; }
+  .nav.scrolled { background: rgba(10,10,10,.75); backdrop-filter: blur(14px); border-color: var(--line); }
+  .nav-in { max-width: 1200px; margin: 0 auto; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .logo { font-weight: 700; font-size: 20px; }
+  .logo i { color: var(--orange); font-style: normal; }
+  .links { display: flex; gap: 28px; font-size: 14px; color: var(--muted); }
+  .links a { position: relative; transition: color .2s; }
+  .links a:hover, .links a.active { color: var(--fg); }
+  .links a.active::after { content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 2px; background: var(--orange); border-radius: 2px; }
+  .nav-r { display: flex; gap: 10px; align-items: center; }
+  .lang { display: flex; border: 1px solid var(--line); border-radius: 999px; padding: 3px; font-size: 12px; font-weight: 600; }
+  .lang button { background: none; border: none; color: var(--muted); padding: 4px 10px; border-radius: 999px; cursor: pointer; font: inherit; }
+  .lang button.on { background: var(--orange); color: #000; }
+  .pill { border: 1px solid var(--line); border-radius: 999px; padding: 8px 16px; font-size: 14px; font-weight: 500; transition: border-color .2s, background .2s; }
+  .pill:hover { border-color: var(--orange); background: rgba(255,106,0,.08); }
+  @media (max-width: 860px) { .links, .nav-r .pill { display: none; } }
+
+  /* Hero — diseño centrado impactante */
+  #terrain { position: fixed; inset: 0; width: 100vw; height: 100vh; display: block; z-index: 0; pointer-events: none; }
+  .hero, section.sec, .marquee, footer { position: relative; z-index: 1; }
+  .hero { position: relative; min-height: 100vh; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+  .hero-in { position: relative; z-index: 2; width: 100%; padding: 120px 24px 80px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+
+  /* Badge disponible */
+  .tags { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; font-family: var(--mono); font-size: 11px; letter-spacing: .14em; color: var(--muted); margin-bottom: 24px; }
+  .tags span { display: inline-flex; align-items: center; gap: 8px; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 0 rgba(34,197,94,.6); animation: ping 2s infinite; }
+  @keyframes ping { 70% { box-shadow: 0 0 0 10px rgba(34,197,94,0); } 100% { box-shadow: 0 0 0 0 rgba(34,197,94,0); } }
+
+  /* Foto circular centrada ENCIMA del nombre */
+  .photo-wrap { position: relative; width: 160px; height: 160px; margin-bottom: 28px; }
+  .photo-glow { position: absolute; inset: -20px; background: radial-gradient(circle, rgba(255,106,0,.5), transparent 70%); filter: blur(20px); border-radius: 50%; }
+  .photo-ring { position: absolute; inset: -12px; border-radius: 50%; border: 1px dashed rgba(255,106,0,.6); animation: rot 20s linear infinite; }
+  @keyframes rot { to { transform: rotate(360deg); } }
+  .photo { width: 160px; height: 160px; border-radius: 50%; overflow: hidden; border: 3px solid var(--orange); position: relative; z-index: 2; }
+  .photo img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+  .float-card { position: absolute; background: rgba(22,22,22,.92); border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; font-size: 12px; backdrop-filter: blur(8px); animation: bob 5s ease-in-out infinite; white-space: nowrap; }
+  .float-card b { color: var(--orange); }
+  .fc1 { top: 10px; left: -90px; } .fc2 { top: 10px; right: -90px; animation-delay: -2.5s; }
+  @keyframes bob { 50% { transform: translateY(-8px); } }
+
+  /* Badge */
+  .sep { color: rgba(255,255,255,.25); margin: 0 4px; }
+
+  /* Nombre GIGANTE — blanco puro, igual que Kevin */
+  .hola { font-style: italic; color: var(--muted); font-size: clamp(16px, 2vw, 22px); margin-bottom: 4px; letter-spacing: .04em; }
+  .name { font-size: clamp(80px, 15vw, 200px); font-weight: 700; line-height: .9; letter-spacing: -0.02em; margin: 0; color: #fff; text-shadow: 0 4px 40px rgba(0,0,0,.3); }
+  .name .ln { display: block; overflow: hidden; }
+  .name .ln span { display: inline-block; }
+
+  /* Role naranja */
+  .role { margin-top: 20px; font-size: clamp(16px, 2.2vw, 22px); color: var(--orange); font-weight: 700; letter-spacing: .04em; }
+
+  /* Terminal typing */
+  .term { margin-top: 20px; display: inline-flex; gap: 10px; align-items: center; background: rgba(15,15,15,.85); border: 1px solid var(--line); border-radius: 10px; padding: 10px 18px; font-family: var(--mono); font-size: 14px; color: #d4d4d4; backdrop-filter: blur(8px); }
+  .term b { color: var(--orange); }
+  .caret { width: 8px; height: 16px; background: var(--orange); animation: blink 1s steps(1) infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+
+  /* Stats */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 32px; max-width: 680px; width: 100%; }
+  .stat { background: rgba(22,22,22,.85); border: 1px solid var(--line); border-radius: 14px; padding: 14px; text-align: center; backdrop-filter: blur(6px); transition: border-color .2s, transform .2s; }
+  .stat:hover { border-color: var(--orange); transform: translateY(-3px); }
+  .stat b { font-size: 28px; font-weight: 700; display: block; }
+  .stat small { color: var(--muted); font-size: 12px; }
+
+  /* CTAs */
+  .ctas { display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap; justify-content: center; }
+  .btn { padding: 13px 26px; border-radius: 999px; font-weight: 600; font-size: 15px; transition: transform .2s, box-shadow .2s, background .2s; display: inline-block; }
+  .btn-o { background: var(--orange); color: #000; box-shadow: 0 8px 30px rgba(255,106,0,.35); }
+  .btn-o:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(255,106,0,.5); }
+  .btn-d { background: rgba(22,22,22,.9); border: 1px solid var(--line); }
+  .btn-d:hover { border-color: var(--fg); }
+
+  .scroll-hint { position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 3; font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: .2em; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .scroll-hint i { width: 1px; height: 36px; background: linear-gradient(var(--orange), transparent); animation: drop 1.8s infinite; }
+  @keyframes drop { 0% { transform: scaleY(0); transform-origin: top; } 50% { transform: scaleY(1); transform-origin: top; } 51% { transform-origin: bottom; } 100% { transform: scaleY(0); transform-origin: bottom; } }
+
+  @media (max-width: 768px) {
+    .name { font-size: clamp(60px, 18vw, 100px); }
+    .stats { grid-template-columns: repeat(2, 1fr); max-width: 360px; }
+    .fc1 { left: -70px; } .fc2 { right: -70px; }
+    .scroll-hint { display: none; }
+  }
+  @media (max-width: 520px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+
+  /* Sections */
+  section.sec { max-width: 1200px; margin: 0 auto; padding: clamp(48px, 7vh, 80px) 24px; }
+  .kicker { font-family: var(--mono); font-size: 12px; letter-spacing: .18em; color: var(--orange); }
+  .h2 { font-size: clamp(40px, 6vw, 72px); font-weight: 700; letter-spacing: -0.03em; margin-top: 10px; }
+  .lead { color: var(--muted); font-size: 18px; margin-top: 10px; max-width: 560px; }
+
+  /* About — foto izquierda, info derecha */
+  .about { display: grid; grid-template-columns: 380px 1fr; gap: 56px; margin-top: 48px; align-items: start; }
+  .about-photo { position: relative; }
+  .about-photo { overflow: hidden; border-radius: 16px; border: 2px solid var(--orange); }
+  .about-photo img { width: calc(100% + 24px); margin: -12px; display: block; object-fit: cover; object-position: top center; aspect-ratio: 3/4; border-radius: 0; border: none; }
+  .about-photo-glow { position: absolute; inset: 0; border-radius: 16px; box-shadow: 0 0 60px rgba(255,106,0,.25); pointer-events: none; }
+  .about p.big { font-size: clamp(18px, 2.2vw, 26px); line-height: 1.45; font-weight: 500; }
+  .about p.big em { color: var(--orange); font-style: normal; }
+  .about p.body { color: #bdbdbd; line-height: 1.75; margin-top: 18px; font-size: 16px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+  .chip { border: 1px solid var(--line); background: var(--card); border-radius: 999px; padding: 8px 14px; font-size: 13px; }
+  @media (max-width: 1024px) { .about { grid-template-columns: 300px 1fr; gap: 36px; } }
+  @media (max-width: 900px) { .about { grid-template-columns: 1fr; } .about-photo { max-width: 280px; } }
+  .code { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 22px; font-family: var(--mono); font-size: 14px; line-height: 1.9; }
+  .code .bar { display: flex; gap: 6px; margin-bottom: 14px; }
+  .code .bar i { width: 11px; height: 11px; border-radius: 50%; background: #333; }
+  .code .bar i:first-child { background: var(--orange); }
+  .k { color: #c792ea; } .p { color: #82aaff; } .s { color: #c3e88d; } .b { color: var(--orange); }
+  .areas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px; }
+  .area { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 24px; transition: border-color .25s, transform .25s; }
+  .area:hover { border-color: var(--orange); transform: translateY(-4px); }
+  .area .n { font-family: var(--mono); color: var(--orange); font-size: 13px; }
+  .area h3 { font-size: 22px; margin-top: 10px; }
+  .area p { color: var(--muted); font-size: 14px; margin-top: 8px; }
+  @media (max-width: 1024px) { .areas { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 860px) { .about, .areas { grid-template-columns: 1fr; } }
+
+  /* Marquee */
+  .marquee { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); overflow: hidden; padding: 22px 0; background: rgba(17,17,17,.7); backdrop-filter: blur(6px); }
+  .track { display: flex; gap: 48px; width: max-content; animation: slide 40s linear infinite; }
+  .marquee.rev .track { animation-direction: reverse; }
+  .track span { font-size: 28px; font-weight: 600; color: #3a3a3a; white-space: nowrap; transition: color .2s; }
+  .track span:hover { color: var(--orange); }
+  .track span::after { content: "✦"; color: var(--orange); margin-left: 48px; font-size: 18px; vertical-align: middle; }
+  @keyframes slide { to { transform: translateX(-50%); } }
+
+  /* Timeline */
+  .timeline { margin-top: 56px; position: relative; padding-left: 36px; }
+  .timeline::before { content: ""; position: absolute; left: 8px; top: 0; bottom: 0; width: 2px; background: var(--line); }
+  .tl-fill { position: absolute; left: 8px; top: 0; width: 2px; background: var(--orange); height: 0; }
+  .job { position: relative; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 24px; margin-bottom: 20px; }
+  .job::before { content: ""; position: absolute; left: -34px; top: 28px; width: 14px; height: 14px; border-radius: 50%; background: var(--bg); border: 2px solid var(--orange); }
+  .job-h { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  .job h3 { font-size: 21px; }
+  .job .co { color: var(--orange); font-weight: 600; margin-top: 4px; }
+  .job .when { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+  .badge { font-family: var(--mono); font-size: 10px; letter-spacing: .1em; background: rgba(255,106,0,.15); color: var(--orange); padding: 3px 8px; border-radius: 999px; margin-left: 8px; }
+  .job ul { margin-top: 14px; padding-left: 18px; color: #bdbdbd; line-height: 1.8; font-size: 15px; }
+  .job li::marker { color: var(--orange); }
+
+  /* Projects */
+  .projects { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 48px; }
+  .proj { background: var(--card); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; transition: border-color .25s, transform .25s; }
+  .proj:hover { border-color: var(--orange); transform: translateY(-6px); }
+  .proj-img { aspect-ratio: 16/9; position: relative; overflow: hidden; }
+  .proj-img div { position: absolute; inset: 0; transition: transform .6s; }
+  .proj:hover .proj-img div { transform: scale(1.06); }
+  .proj-img span { position: absolute; top: 14px; left: 14px; font-family: var(--mono); font-size: 11px; background: rgba(0,0,0,.6); padding: 4px 10px; border-radius: 999px; }
+  .proj-b { padding: 22px; }
+  .proj-b .n { font-family: var(--mono); color: var(--orange); font-size: 13px; }
+  .proj-b h3 { font-size: 24px; margin-top: 6px; }
+  .proj-b p { color: var(--muted); font-size: 15px; margin-top: 8px; line-height: 1.6; }
+  .stack { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+  .stack span { font-family: var(--mono); font-size: 11px; border: 1px solid var(--line); padding: 4px 10px; border-radius: 999px; color: #cfcfcf; }
+  .proj-l { display: flex; gap: 16px; margin-top: 18px; font-size: 14px; font-weight: 600; }
+  .proj-l a:hover { color: var(--orange); }
+  @media (max-width: 860px) { .projects { grid-template-columns: 1fr; } }
+
+  /* Contact */
+  .contact { text-align: center; border: 1px solid var(--line); border-radius: 28px; padding: 80px 24px; background: radial-gradient(ellipse at 50% 120%, rgba(255,106,0,.25), transparent 60%), var(--bg-2); }
+  .contact .h2 span { color: var(--orange); }
+  .contact .ctas { justify-content: center; }
+  .socials { display: flex; justify-content: center; gap: 12px; margin-top: 28px; }
+  .socials a { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); display: grid; place-items: center; font-size: 14px; font-weight: 700; transition: border-color .2s, color .2s; }
+  .socials a:hover { border-color: var(--orange); color: var(--orange); }
+  footer { text-align: center; color: var(--muted); font-size: 13px; padding: 32px 16px; font-family: var(--mono); }
+
+  /* Reveal */
+  .rv { opacity: 0; transform: translateY(40px); transition: opacity .9s ease, transform .9s cubic-bezier(.2,.8,.2,1); }
+  .rv.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    .rv { opacity: 1; transform: none; }
+  }
+</style>
 </head>
-<body class="bg-surface-black text-on-surface antialiased">
-  <header class="fixed top-0 left-0 w-full z-50 bg-nav-translucent backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] border-b border-white/5">
-    <div class="h-11 max-w-7xl mx-auto px-4 lg:px-12 flex items-center justify-between gap-4">
-      <a class="flex items-center text-text-primary opacity-80 hover:opacity-100 transition-opacity" href="#" title="Apple Inicio">
-        <svg class="w-4 h-4 fill-current" viewbox="0 0 170 170">
-          <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.7-3.04-7.66-7.85-11.88-14.42-6.19-9.69-11.13-20.91-14.82-33.66-3.69-12.75-5.54-24.58-5.54-35.5 0-14.54 3.63-26.68 10.9-36.42 7.27-9.74 16.59-14.73 27.97-14.98 4.35 0 9.38 1.14 15.08 3.42 5.71 2.29 9.58 3.49 11.62 3.6 2.05-.11 6.13-1.37 12.24-3.78 6.11-2.41 11.29-3.5 15.54-3.26 12.06.66 21.73 4.8 28.99 12.44-10.43 6.31-15.54 15.11-15.32 26.4.22 8.7 3.6 15.93 10.14 21.7 6.53 5.77 14.19 8.94 22.98 9.51-2.07 6.53-4.58 13.06-7.53 19.59zm-27.8-106.6c0 6.64-2.44 12.76-7.32 18.36-4.88 5.6-10.87 9.09-17.97 10.47-.22-.87-.33-1.85-.33-2.94 0-6.42 2.61-12.89 7.84-19.4 5.23-6.52 11.21-10.39 17.94-11.62.07 1.74.11 3.48.11 5.24z"></path>
-        </svg>
-      </a>
-      <nav id="desktop-nav" class="hidden md:flex items-center justify-between flex-1 max-w-4xl" data-active-classes="text-text-primary font-bold">
-        <a class="nav-item font-nav-link text-nav-link text-on-surface-variant hover:text-text-primary transition-colors py-1" href="#seccion-mac">Mac</a>
-        <a class="nav-item font-nav-link text-nav-link text-on-surface-variant hover:text-text-primary transition-colors py-1" href="#seccion-ipad">iPad</a>
-        <a class="nav-item font-nav-link text-nav-link text-text-primary font-bold transition-colors py-1" href="#seccion-iphone">iPhone</a>
-        <a class="nav-item font-nav-link text-nav-link text-on-surface-variant hover:text-text-primary transition-colors py-1" href="#seccion-watch">Watch</a>
-        <a class="nav-item font-nav-link text-nav-link text-on-surface-variant hover:text-text-primary transition-colors py-1" href="#seccion-airpods">AirPods</a>
-        <a class="nav-item font-nav-link text-nav-link text-on-surface-variant hover:text-text-primary transition-colors py-1" href="#seccion-tv">TV y Casa</a>
-        <a class="nav-item font-nav-link text-nav-link text-on-surface-variant hover:text-text-primary transition-colors py-1" href="#seccion-tv">Entretenimiento</a>
-        <a class="nav-item font-nav-link text-nav-link text-on-surface-variant hover:text-text-primary transition-colors py-1" href="#seccion-soporte">Soporte</a>
-        <a class="nav-item font-nav-link text-nav-link text-on-surface-variant hover:text-text-primary transition-colors py-1" href="#seccion-donde-comprar">Dónde comprar</a>
-      </nav>
-      <div class="flex items-center gap-3">
-        <!-- Botón Contacto WhatsApp Header -->
-        <a href="https://wa.me/51917160325?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20los%20productos%20Apple" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 bg-[#25D366]/20 hover:bg-[#25D366]/30 text-[#25D366] border border-[#25D366]/40 px-3 py-1 rounded-full text-xs font-medium transition-all hover:scale-105 active:scale-95" title="WhatsApp 917160325">
-          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.64c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.3z"/>
-          </svg>
-          <span class="font-semibold hidden sm:inline">WhatsApp</span>
-          <span class="text-[11px] opacity-90 font-mono">917160325</span>
-        </a>
-        <a href="#seccion-soporte" class="flex items-center justify-center text-text-primary opacity-80 hover:opacity-100 transition-opacity" title="Soporte y Contacto">
-          <span class="material-symbols-outlined text-[18px]">support_agent</span>
-        </a>
-        <!-- Hamburguesa Mobile -->
-        <button id="mobile-menu-btn" type="button" class="md:hidden flex items-center justify-center text-text-primary p-1 rounded hover:bg-white/10 transition-colors" aria-label="Menú">
-          <span id="menu-icon" class="material-symbols-outlined text-[20px]">menu</span>
-        </button>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a class="logo" href="#hero">HC<i>.</i></a>
+    <nav class="links">
+      <a href="#hero" class="active" data-i="nav1">Inicio</a>
+      <a href="#sobre" data-i="nav2">Sobre mí</a>
+      <a href="#experiencia" data-i="nav3">Experiencia</a>
+      <a href="#proyectos" data-i="nav4">Proyectos</a>
+      <a href="#contacto" data-i="nav5">Contacto</a>
+    </nav>
+    <div class="nav-r">
+      <div class="lang"><button class="on" data-lang="es">ES</button><button data-lang="en">EN</button></div>
+      <a class="pill" href="#contacto" data-i="talk">Hablemos</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<canvas id="terrain"></canvas>
+<section class="hero" id="hero">
+  <div class="hero-in">
+    <div class="tags h-in"><span><i class="dot"></i><b data-i="open">DISPONIBLE</b></span><span class="sep">|</span><span>LIMA, PERÚ</span></div>
+    <p class="hola h-in" data-i="hi">Hola, soy</p>
+    <h1 class="name h-in">
+      <span class="ln"><span class="h-name">Henry</span></span>
+      <span class="ln"><span class="h-name">Curto</span></span>
+    </h1>
+    <p class="role h-in" data-i="role">Marketing y Gestión Comercial</p>
+    <div class="term h-in"><b>&gt;</b><span id="typed"></span><i class="caret"></i></div>
+    <div class="ctas h-in">
+      <a class="btn btn-o" href="#proyectos" data-i="cta1">Ver proyectos</a>
+      <a class="btn btn-d" href="#contacto" data-i="cta2">Contáctame</a>
+    </div>
+  </div>
+  <div class="scroll-hint">SCROLL<i></i></div>
+</section>
+
+<!-- SOBRE MÍ -->
+<section class="sec" id="sobre">
+  <p class="kicker rv">01 / <span data-i="k1">SOBRE MÍ</span></p>
+  <h2 class="h2 rv" data-i="t1">Sobre mí</h2>
+  <p class="lead rv" data-i="about0">Profesional enfocado en construir equipos de ventas de alto rendimiento.</p>
+
+  <div class="about">
+    <div class="about-photo rv">
+      <img src="henry-negro.jpeg" alt="Henry Curto" />
+      <div class="about-photo-glow"></div>
+    </div>
+    <div>
+      <p class="big rv" data-i="about1">Profesional con más de <em>21 años de experiencia</em> en ventas de intangibles, liderazgo comercial y desarrollo de equipos de alto rendimiento.</p>
+      <p class="body rv" data-i="about2">Especialista en negociación, asesoría comercial y fidelización de clientes corporativos e individuales. Con historial comprobado en el cumplimiento y superación de metas de ventas, diseño e implemento programas formativos que mejoran el desempeño y la productividad de los equipos.</p>
+      <div class="chips rv">
+        <span class="chip">🟢 <span data-i="c1">Disponible</span></span>
+        <span class="chip">📍 Lima, Perú</span>
+        <span class="chip">🎓 Marketing y Gestión Comercial · USIL</span>
+        <span class="chip">💼 +21 años de experiencia</span>
+      </div>
+      <div class="code rv" style="margin-top:28px">
+        <div class="bar"><i></i><i></i><i></i></div>
+        <div><span class="k">const</span> <span class="p">henry</span> = {</div>
+        <div>&nbsp;&nbsp;disponible: <span class="b">true</span>,</div>
+        <div>&nbsp;&nbsp;ubicacion: <span class="s">'Lima, Perú 🇵🇪'</span>,</div>
+        <div>&nbsp;&nbsp;enfoque: <span class="s">'Ventas · Liderazgo · Marketing'</span>,</div>
+        <div>&nbsp;&nbsp;experiencia: <span class="s">'15+ años'</span>,</div>
+        <div>&nbsp;&nbsp;formacion: <span class="s">'Marketing USIL · Admin. IDAT'</span></div>
+        <div>}</div>
       </div>
     </div>
+  </div>
+  <div class="areas">
+    <div class="area rv"><span class="n">01</span><h3 data-i="a1">Capacitación en Ventas</h3><p data-i="a1d">Diseño e implementación de programas formativos para mejorar el desempeño comercial de equipos.</p></div>
+    <div class="area rv"><span class="n">02</span><h3 data-i="a2">Gestión Comercial</h3><p data-i="a2d">Liderazgo de procesos de ventas, negociación con clientes corporativos e individuales y cumplimiento de metas.</p></div>
+    <div class="area rv"><span class="n">03</span><h3 data-i="a3">Marketing Digital</h3><p data-i="a3d">Estrategia de marca personal, presencia en redes sociales y creación de páginas web profesionales.</p></div>
+  </div>
+</section>
 
-    <!-- Menú desplegable Mobile -->
-    <div id="mobile-menu" class="hidden md:hidden fixed inset-x-0 top-11 bg-surface-black/95 backdrop-blur-2xl border-b border-white/10 p-6 flex flex-col gap-3 shadow-2xl transition-all">
-      <a class="mobile-nav-link text-lg font-medium text-text-primary py-2 border-b border-white/5" href="#seccion-mac">Mac</a>
-      <a class="mobile-nav-link text-lg font-medium text-text-primary py-2 border-b border-white/5" href="#seccion-ipad">iPad</a>
-      <a class="mobile-nav-link text-lg font-medium text-text-primary py-2 border-b border-white/5" href="#seccion-iphone">iPhone</a>
-      <a class="mobile-nav-link text-lg font-medium text-text-primary py-2 border-b border-white/5" href="#seccion-watch">Watch</a>
-      <a class="mobile-nav-link text-lg font-medium text-text-primary py-2 border-b border-white/5" href="#seccion-airpods">AirPods</a>
-      <a class="mobile-nav-link text-lg font-medium text-text-primary py-2 border-b border-white/5" href="#seccion-tv">TV y Casa</a>
-      <a class="mobile-nav-link text-lg font-medium text-text-primary py-2 border-b border-white/5" href="#seccion-tv">Entretenimiento</a>
-      <a class="mobile-nav-link text-lg font-medium text-text-primary py-2 border-b border-white/5" href="#seccion-soporte">Soporte</a>
-      <a class="mobile-nav-link text-lg font-medium text-text-primary py-2 border-b border-white/5" href="#seccion-donde-comprar">Dónde comprar</a>
-      <div class="pt-3 flex flex-col gap-2">
-        <a href="https://wa.me/51917160325?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20productos%20Apple" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white py-3 px-4 rounded-xl font-bold shadow-lg">
-          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.64c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.3z"/></svg>
-          Contactar por WhatsApp: 917160325
-        </a>
-      </div>
+<div class="marquee"><div class="track" id="m1"></div></div>
+<div class="marquee rev"><div class="track" id="m2"></div></div>
+
+<!-- EXPERIENCIA -->
+<section class="sec" id="experiencia">
+  <p class="kicker rv">02 / <span data-i="k2">EXPERIENCIA</span></p>
+  <h2 class="h2 rv" data-i="t2">Experiencia</h2>
+  <p class="lead rv" data-i="l2">Dónde he trabajado y qué he logrado.</p>
+  <div class="timeline" id="timeline">
+    <div class="tl-fill" id="tlFill"></div>
+
+    <div class="job rv">
+      <div class="job-h"><div><h3>Especialista en Seguridad Tecnológica <span class="badge" data-i="now">ACTUAL</span></h3><p class="co">Prosegur Alarmas</p></div><span class="when">Ene 2026 — HOY · Lima</span></div>
+      <ul>
+        <li>Asesoría y venta de soluciones de seguridad tecnológica a clientes corporativos e individuales.</li>
+        <li>Gestión de relaciones estratégicas y fidelización de cartera de clientes.</li>
+        <li>Cumplimiento y superación de metas comerciales mensuales.</li>
+      </ul>
     </div>
-  </header>
 
-  <main class="w-full pt-11 bg-surface-black">
-    <div class="flex flex-col w-full">
-      <!-- HERO 1: iPhone 18 Pro -->
-      <section id="seccion-iphone" class="scroll-mt-11 relative w-full bg-surface-black overflow-hidden flex flex-col items-center pt-16 md:pt-24 pb-12 select-none">
-        <!-- Atmospheric subtle ambient light behind device -->
-        <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-gradient-to-b from-primary/10 via-primary/5 to-transparent rounded-full blur-[120px] pointer-events-none"></div>
-        <!-- Header Copy Stack -->
-        <div class="relative z-10 flex flex-col items-center text-center px-6 max-w-4xl mx-auto">
-          <h1 class="font-display-hero text-display-hero text-text-primary tracking-tight font-bold">
-            iPhone 18 Pro
-          </h1>
-          <p class="font-tagline-lg text-tagline-lg text-text-primary mt-2 font-normal">
-            El Pro va por más.
-          </p>
-          <p class="font-body-standard text-body-standard text-text-secondary mt-1">
-            Consulta la disponibilidad más adelante.
-          </p>
-          <!-- CTAs -->
-          <div class="flex items-center gap-space-md mt-5">
-            <a class="inline-flex items-center justify-center font-label-cta text-label-cta bg-primary-container hover:bg-interactive-hover text-on-primary-container px-5 py-2 rounded-full transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg shadow-primary-container/20" href="https://wa.me/51917160325?text=Hola%2C%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20iPhone%2018%20Pro" target="_blank" rel="noopener noreferrer">
-              Más información
-            </a>
-            <a class="inline-flex items-center gap-1.5 font-label-cta text-label-cta bg-[#25D366]/20 hover:bg-[#25D366]/30 text-[#25D366] border border-[#25D366]/40 px-5 py-2 rounded-full transition-all duration-200 hover:scale-105 active:scale-95" href="https://wa.me/51917160325?text=Hola%2C%20deseo%20comprar%20el%20iPhone%2018%20Pro" target="_blank" rel="noopener noreferrer">
-              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.64c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.3z"/></svg>
-              Comprar
-            </a>
-          </div>
-        </div>
-        <!-- 3D Monolithic PRO Metallic Typographic & Titanium Hardware Showcase -->
-        <div class="relative w-full max-w-6xl mx-auto mt-12 flex flex-col items-center justify-center">
-          <div class="relative w-full aspect-[16/9] md:aspect-[21/9] flex items-center justify-center">
-            <!-- Giant Chrome Monolithic PRO lettermark in background -->
-            <div class="absolute inset-x-0 bottom-4 md:bottom-8 flex justify-center items-center pointer-events-none select-none overflow-hidden opacity-90">
-              <span class="font-display-hero text-[140px] md:text-[280px] lg:text-[340px] leading-none font-black tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-surface-tile-light via-secondary to-surface-bright/20 filter drop-shadow-[0_20px_50px_rgba(255,255,255,0.12)]">
-                PRO
-              </span>
-            </div>
-            <!-- Video Showcase -->
-            <div class="relative z-20 w-4/5 md:w-3/5 max-w-2xl transform transition-transform duration-700 hover:scale-[1.02]">
-              <video 
-                class="w-full h-auto object-contain mx-auto filter drop-shadow-[0_25px_40px_rgba(0,0,0,0.9)]" 
-                autoplay 
-                muted 
-                loop 
-                playsinline
-                poster="iphone_18_pro_poster.png">
-                <source src="iphone_18_pro.mp4" type="video/mp4">
-                <source src="iPhone_18_Pro_floating_20261010165038.mp4" type="video/mp4">
-                Tu navegador no soporta video HTML5.
-              </video>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- HERO 2: Apple Watch Series 12 -->
-      <section id="seccion-watch" class="scroll-mt-11 relative w-full bg-surface-black overflow-hidden flex flex-col items-center pt-16 pb-16">
-        <!-- Título -->
-        <div class="flex items-center justify-center gap-2 mb-8">
-          <svg class="w-7 h-7 md:w-9 md:h-9 fill-text-primary shrink-0" viewbox="0 0 170 170">
-            <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.7-3.04-7.66-7.85-11.88-14.42-6.19-9.69-11.13-20.91-14.82-33.66-3.69-12.75-5.54-24.58-5.54-35.5 0-14.54 3.63-26.68 10.9-36.42 7.27-9.74 16.59-14.73 27.97-14.98 4.35 0 9.38 1.14 15.08 3.42 5.71 2.29 9.58 3.49 11.62 3.6 2.05-.11 6.13-1.37 12.24-3.78 6.11-2.41 11.29-3.5 15.54-3.26 12.06.66 21.73 4.8 28.99 12.44-10.43 6.31-15.54 15.11-15.32 26.4.22 8.7 3.6 15.93 10.14 21.7 6.53 5.77 14.19 8.94 22.98 9.51-2.07 6.53-4.58 13.06-7.53 19.59zm-27.8-106.6c0 6.64-2.44 12.76-7.32 18.36-4.88 5.6-10.87 9.09-17.97 10.47-.22-.87-.33-1.85-.33-2.94 0-6.42 2.61-12.89 7.84-19.4 5.23-6.52 11.21-10.39 17.94-11.62.07 1.74.11 3.48.11 5.24z"></path>
-          </svg>
-          <span class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-text-primary">WATCH</span>
-          <span class="text-4xl md:text-5xl lg:text-6xl font-light tracking-wide text-text-primary">SERIES 12</span>
-        </div>
-
-        <!-- Imagen grande centrada -->
-        <div class="w-full flex justify-center px-6 mb-8">
-          <img class="w-full max-w-2xl md:max-w-3xl h-auto object-contain pointer-events-none select-none" alt="Apple Watch Series 12" src="hero_apple_watch_series_12_preorder__cv2wd7ow8926_large_2x.jpg"/>
-        </div>
-
-        <!-- Texto y CTAs debajo -->
-        <div class="flex flex-col items-center text-center px-6 max-w-2xl mx-auto">
-          <p class="text-xl md:text-2xl lg:text-3xl font-semibold text-text-primary leading-snug">
-            Con la detección de frecuencia cardiaca más precisa en un wearable.<sup class="text-sm font-normal">1</sup>
-          </p>
-          <p class="font-body-standard text-body-standard text-text-secondary mt-2">
-            Consulta la disponibilidad más adelante.
-          </p>
-          <div class="flex items-center gap-space-sm mt-5">
-            <a class="inline-flex items-center justify-center font-label-cta text-label-cta bg-primary-container hover:bg-interactive-hover text-on-primary-container px-5 py-2 rounded-full transition-all duration-200 hover:scale-105 active:scale-95 shadow-md" href="https://wa.me/51917160325?text=Hola%2C%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20Apple%20Watch%20Series%2012" target="_blank" rel="noopener noreferrer">
-              Más información
-            </a>
-            <a class="inline-flex items-center gap-1.5 font-label-cta text-label-cta bg-[#25D366]/20 hover:bg-[#25D366]/30 text-[#25D366] border border-[#25D366]/40 px-5 py-2 rounded-full transition-all duration-200 hover:scale-105 active:scale-95" href="https://wa.me/51917160325?text=Hola%2C%20deseo%20comprar%20el%20Apple%20Watch%20Series%2012" target="_blank" rel="noopener noreferrer">
-              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.64c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.3z"/></svg>
-              Comprar
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- HERO 3: Apple Watch Ultra 4 -->
-      <section class="relative w-full bg-surface-black overflow-hidden flex flex-col items-center pt-16 pb-0 select-none">
-        <div class="relative z-10 flex flex-col items-center text-center px-6 max-w-3xl mx-auto">
-          <div class="flex items-center justify-center gap-2 mb-1">
-            <svg class="w-8 h-8 fill-text-primary inline-block" viewbox="0 0 170 170">
-              <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.7-3.04-7.66-7.85-11.88-14.42-6.19-9.69-11.13-20.91-14.82-33.66-3.69-12.75-5.54-24.58-5.54-35.5 0-14.54 3.63-26.68 10.9-36.42 7.27-9.74 16.59-14.73 27.97-14.98 4.35 0 9.38 1.14 15.08 3.42 5.71 2.29 9.58 3.49 11.62 3.6 2.05-.11 6.13-1.37 12.24-3.78 6.11-2.41 11.29-3.5 15.54-3.26 12.06.66 21.73 4.8 28.99 12.44-10.43 6.31-15.54 15.11-15.32 26.4.22 8.7 3.6 15.93 10.14 21.7 6.53 5.77 14.19 8.94 22.98 9.51-2.07 6.53-4.58 13.06-7.53 19.59zm-27.8-106.6c0 6.64-2.44 12.76-7.32 18.36-4.88 5.6-10.87 9.09-17.97 10.47-.22-.87-.33-1.85-.33-2.94 0-6.42 2.61-12.89 7.84-19.4 5.23-6.52 11.21-10.39 17.94-11.62.07 1.74.11 3.48.11 5.24z"></path>
-            </svg>
-            <span class="text-3xl md:text-4xl font-bold tracking-tight text-text-primary">
-              WATCH
-            </span>
-            <span class="text-3xl md:text-4xl font-normal tracking-wide text-text-primary ml-1">
-              ULTRA 4
-            </span>
-          </div>
-          <h2 class="text-xl md:text-2xl text-text-primary mt-1 font-normal">
-            Una batería que te dejará sin aliento.
-          </h2>
-          <p class="text-sm md:text-base text-text-secondary mt-1">
-            Consulta la disponibilidad más adelante.
-          </p>
-          <div class="flex items-center gap-space-sm mt-4">
-            <a class="inline-flex items-center justify-center text-sm font-medium bg-primary-container hover:bg-interactive-hover text-on-primary-container px-5 py-2 rounded-full transition-all duration-200 hover:scale-105 active:scale-95 shadow-md" href="https://wa.me/51917160325?text=Hola%2C%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20Apple%20Watch%20Ultra%204" target="_blank" rel="noopener noreferrer">
-              Más información
-            </a>
-            <a class="inline-flex items-center gap-1.5 text-sm font-medium bg-[#25D366]/20 hover:bg-[#25D366]/30 text-[#25D366] border border-[#25D366]/40 px-5 py-2 rounded-full transition-all duration-200 hover:scale-105 active:scale-95" href="https://wa.me/51917160325?text=Hola%2C%20deseo%20comprar%20el%20Apple%20Watch%20Ultra%204" target="_blank" rel="noopener noreferrer">
-              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.64c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.3z"/></svg>
-              Comprar
-            </a>
-          </div>
-        </div>
-        <!-- Ultra Hardware Showcase -->
-        <div class="relative w-full overflow-hidden flex justify-center items-start mt-2 h-[340px] md:h-[420px] lg:h-[480px]">
-          <img class="w-[2200px] md:w-[2700px] lg:w-[3000px] max-w-none -mt-[150px] md:-mt-[190px] lg:-mt-[220px] pointer-events-none select-none filter drop-shadow-[0_20px_35px_rgba(0,0,0,0.8)]" alt="Apple Watch Ultra 4" src="apple_watch_ultra_4.jpg"/>
-        </div>
-      </section>
-
-      <!-- BENTO GRID SECTION: Ecosystem Hardware (2 Columns) -->
-      <section class="w-full bg-surface-black px-3 md:px-6 py-3">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-3">
-          <!-- Bento Tile 1: AirPods 5 (Dark Editorial Portrait) -->
-          <div id="seccion-airpods" class="scroll-mt-14 group relative bg-surface-tile-dark rounded-none md:rounded-lg overflow-hidden min-h-[580px] flex flex-col justify-between p-8 md:p-12 text-center transition-all duration-300">
-            <div class="relative z-10 flex flex-col items-center">
-              <h3 class="font-headline-tile text-headline-tile text-text-primary font-bold tracking-tight">
-                AirPods 5
-              </h3>
-              <p class="font-tagline-sm text-tagline-sm text-text-primary mt-2 max-w-sm">
-                Descubre la magia de la Cancelación Activa de Ruido.
-              </p>
-              <p class="font-caption-legal text-caption-legal text-text-secondary mt-1">
-                Consulta la disponibilidad más adelante.
-              </p>
-              <div class="flex items-center gap-space-sm mt-4">
-                <a class="inline-flex items-center justify-center font-label-cta text-label-cta bg-primary-container hover:bg-interactive-hover text-on-primary-container px-5 py-2 rounded-full transition-all duration-200 hover:scale-105 active:scale-95" href="https://wa.me/51917160325?text=Hola%2C%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20AirPods%205" target="_blank" rel="noopener noreferrer">
-                  Más información
-                </a>
-                <a class="inline-flex items-center gap-1.5 font-label-cta text-label-cta bg-[#25D366]/20 hover:bg-[#25D366]/30 text-[#25D366] border border-[#25D366]/40 px-5 py-2 rounded-full transition-all duration-200 hover:scale-105 active:scale-95" href="https://wa.me/51917160325?text=Hola%2C%20deseo%20comprar%20los%20AirPods%205" target="_blank" rel="noopener noreferrer">
-                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.64c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.3z"/></svg>
-                  Comprar
-                </a>
-              </div>
-            </div>
-            <div class="absolute inset-0 w-full h-full z-0 overflow-hidden">
-              <img class="w-full h-full object-cover object-center opacity-70 group-hover:scale-105 transition-transform duration-700" alt="AirPods 5" src="promo_airpods_5_preorder__lydvte0llb6i_large_2x.jpg"/>
-              <div class="absolute inset-0 bg-gradient-to-t from-surface-black via-transparent to-surface-black/80"></div>
-            </div>
-          </div>
-
-          <!-- Bento Tile 2: MacBook Air (Light Minimal Tile) -->
-          <div id="seccion-mac" class="scroll-mt-14 group relative bg-surface-tile-light rounded-none md:rounded-lg overflow-hidden min-h-[580px] flex flex-col justify-between p-8 md:p-12 text-center transition-all duration-300">
-            <div class="relative z-10 flex flex-col items-center">
-              <h3 class="font-headline-tile text-headline-tile text-on-secondary-fixed font-bold tracking-tight">
-                MacBook Air
-              </h3>
-              <p class="font-tagline-sm text-tagline-sm text-on-secondary-fixed-variant mt-2">
-                Ahora con los superpoderes del chip M5.
-              </p>
-              <div class="flex items-center gap-space-sm mt-4">
-                <a class="inline-flex items-center justify-center font-label-cta text-label-cta bg-primary-container hover:bg-interactive-hover text-on-primary-container px-5 py-2 rounded-full transition-all duration-200 hover:scale-105 active:scale-95" href="https://wa.me/51917160325?text=Hola%2C%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20MacBook%20Air%20M5" target="_blank" rel="noopener noreferrer">
-                  Más información
-                </a>
-                <a class="inline-flex items-center gap-1.5 font-label-cta text-label-cta bg-[#25D366] hover:bg-[#20ba59] text-white px-5 py-2 rounded-full transition-all duration-200 hover:scale-105 active:scale-95 shadow-md shadow-[#25D366]/20 font-semibold" href="https://wa.me/51917160325?text=Hola%2C%20deseo%20comprar%20la%20MacBook%20Air%20M5" target="_blank" rel="noopener noreferrer">
-                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.64c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.3z"/></svg>
-                  Comprar
-                </a>
-              </div>
-            </div>
-            <div class="relative z-10 w-full max-w-md mx-auto mt-6 flex-1 flex items-center justify-center">
-              <img class="w-full h-auto object-contain transform group-hover:-translate-y-2 transition-transform duration-500" alt="MacBook Air M5" src="promo_macbook_air_m5__e5xk2yysqiie_large_2x.jpg"/>
-            </div>
-          </div>
-
-          <!-- Bento Tile 3: iPad Air (Light Minimal Color Burst) -->
-          <div id="seccion-ipad" class="scroll-mt-14 group relative bg-surface-tile-light rounded-none md:rounded-lg overflow-hidden min-h-[580px] flex flex-col justify-between p-8 md:p-12 text-center transition-all duration-300">
-            <div class="relative z-10 flex flex-col items-center">
-              <div class="flex items-center justify-center gap-1.5">
-                <span class="font-headline-tile text-headline-tile text-on-secondary-fixed font-bold tracking-tight">iPad</span>
-                <span class="font-headline-tile text-headline-tile italic font-light text-primary-container tracking-wider">air</span>
-              </div>
-              <p class="font-tagline-sm text-tagline-sm text-on-secondary-fixed-variant mt-2">
-                Ahora con los superpoderes del chip M4.
-              </p>
-              <div class="flex items-center gap-space-sm mt-4">
-                <a class="inline-flex items-center justify-center font-label-cta text-label-cta bg-primary-container hover:bg-interactive-hover text-on-primary-container px-5 py-2 rounded-full transition-all duration-200 hover:scale-105 active:scale-95" href="https://wa.me/51917160325?text=Hola%2C%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20iPad%20Air%20M4" target="_blank" rel="noopener noreferrer">
-                  Más información
-                </a>
-                <a class="inline-flex items-center gap-1.5 font-label-cta text-label-cta bg-[#25D366] hover:bg-[#20ba59] text-white px-5 py-2 rounded-full transition-all duration-200 hover:scale-105 active:scale-95 shadow-md shadow-[#25D366]/20 font-semibold" href="https://wa.me/51917160325?text=Hola%2C%20deseo%20comprar%20el%20iPad%20Air%20M4" target="_blank" rel="noopener noreferrer">
-                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.64c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.3z"/></svg>
-                  Comprar
-                </a>
-              </div>
-            </div>
-            <div class="relative z-10 w-full max-w-md mx-auto mt-6 flex-1 flex items-center justify-center">
-              <img class="w-full h-auto object-contain transform group-hover:scale-105 transition-transform duration-500" alt="iPad Air M4" src="promo_ipad_air_m4__bgcv7t286k8y_large_2x.jpg"/>
-            </div>
-          </div>
-
-          <!-- Bento Tile 4: AirPods Pro 3 (Clean White Minimal Studio) -->
-          <div class="group relative bg-surface-tile-light rounded-none md:rounded-lg overflow-hidden min-h-[580px] flex flex-col justify-between p-8 md:p-12 text-center transition-all duration-300">
-            <div class="relative z-10 flex flex-col items-center">
-              <h3 class="font-headline-tile text-headline-tile text-on-secondary-fixed font-bold tracking-tight">
-                AirPods Pro 3
-              </h3>
-              <p class="font-tagline-sm text-tagline-sm text-on-secondary-fixed-variant mt-2 max-w-sm">
-                La mejor Cancelación Activa de Ruido del mundo en audífonos internos.<sup class="text-xs font-normal">2</sup>
-              </p>
-              <div class="flex items-center gap-space-sm mt-4">
-                <a class="inline-flex items-center justify-center font-label-cta text-label-cta bg-primary-container hover:bg-interactive-hover text-on-primary-container px-5 py-2 rounded-full transition-all duration-200 hover:scale-105 active:scale-95" href="https://wa.me/51917160325?text=Hola%2C%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20AirPods%20Pro%203" target="_blank" rel="noopener noreferrer">
-                  Más información
-                </a>
-                <a class="inline-flex items-center gap-1.5 font-label-cta text-label-cta bg-[#25D366] hover:bg-[#20ba59] text-white px-5 py-2 rounded-full transition-all duration-200 hover:scale-105 active:scale-95 shadow-md shadow-[#25D366]/20 font-semibold" href="https://wa.me/51917160325?text=Hola%2C%20deseo%20comprar%20los%20AirPods%20Pro%203" target="_blank" rel="noopener noreferrer">
-                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.64c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.3z"/></svg>
-                  Comprar
-                </a>
-              </div>
-            </div>
-            <div class="relative z-10 w-full max-w-md mx-auto mt-4 flex-1 flex items-center justify-center">
-              <img class="w-4/5 h-auto object-contain transform group-hover:scale-105 transition-transform duration-500" alt="AirPods Pro 3" src="promo_airpods_pro_3__e4755qofhnyq_large_2x.jpg"/>
-            </div>
-          </div>
-
-          <!-- Bento Tile 5: MacBook Pro (Dark Titanium Theater) -->
-          <div class="group relative bg-surface-tile-dark rounded-none md:rounded-lg overflow-hidden min-h-[580px] flex flex-col p-8 md:p-12 text-center transition-all duration-300">
-            <div class="relative z-10 flex flex-col items-center">
-              <h3 class="font-headline-tile text-headline-tile text-text-primary font-bold tracking-tight">
-                MacBook Pro
-              </h3>
-              <p class="font-tagline-sm text-tagline-sm text-on-surface-variant mt-2">
-                Ahora con los chips M5, M5 Pro y M5 Max.
-              </p>
-              <div class="flex items-center gap-space-sm mt-4">
-                <a class="inline-flex items-center justify-center font-label-cta text-label-cta bg-primary-container hover:bg-interactive-hover text-on-primary-container px-5 py-2 rounded-full transition-all duration-200 hover:scale-105 active:scale-95" href="https://wa.me/51917160325?text=Hola%2C%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20MacBook%20Pro" target="_blank" rel="noopener noreferrer">
-                  Más información
-                </a>
-                <a class="inline-flex items-center justify-center font-label-cta text-label-cta bg-transparent border border-white/40 hover:bg-white/10 text-text-primary px-5 py-2 rounded-full transition-all duration-200 hover:scale-105 active:scale-95" href="https://wa.me/51917160325?text=Hola%2C%20deseo%20comprar%20la%20MacBook%20Pro" target="_blank" rel="noopener noreferrer">
-                  Comprar
-                </a>
-              </div>
-            </div>
-            <!-- Image bottom-anchored -->
-            <div class="absolute bottom-0 left-0 right-0 h-[58%] pointer-events-none select-none">
-              <div class="absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-surface-tile-dark to-transparent z-10"></div>
-              <img class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" alt="MacBook Pro" src="hero_macbook_pro__b9g09qsga0vm_large_2x.jpg"/>
-            </div>
-          </div>
-
-          <!-- Bento Tile 6: iPad Pro (Deep Black OLED Luminescence) -->
-          <div class="group relative bg-surface-tile-dark rounded-none md:rounded-lg overflow-hidden min-h-[580px] flex flex-col p-8 md:p-12 text-center transition-all duration-300">
-            <div class="relative z-10 flex flex-col items-center">
-              <h3 class="font-headline-tile text-headline-tile text-text-primary font-bold tracking-tight">
-                iPad Pro
-              </h3>
-              <p class="font-tagline-sm text-tagline-sm text-on-surface-variant mt-2 max-w-sm">
-                Avanzado rendimiento para la IA y funcionalidades revolucionarias.
-              </p>
-              <div class="flex items-center gap-space-sm mt-4">
-                <a class="inline-flex items-center justify-center font-label-cta text-label-cta bg-primary-container hover:bg-interactive-hover text-on-primary-container px-5 py-2 rounded-full transition-all duration-200 hover:scale-105 active:scale-95" href="https://wa.me/51917160325?text=Hola%2C%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20iPad%20Pro" target="_blank" rel="noopener noreferrer">
-                  Más información
-                </a>
-                <a class="inline-flex items-center justify-center font-label-cta text-label-cta bg-transparent border border-white/40 hover:bg-white/10 text-text-primary px-5 py-2 rounded-full transition-all duration-200 hover:scale-105 active:scale-95" href="https://wa.me/51917160325?text=Hola%2C%20deseo%20comprar%20el%20iPad%20Pro" target="_blank" rel="noopener noreferrer">
-                  Comprar
-                </a>
-              </div>
-            </div>
-            <!-- Image bottom-anchored -->
-            <div class="absolute bottom-0 left-0 right-0 h-[60%] pointer-events-none select-none">
-              <div class="absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-surface-tile-dark to-transparent z-10"></div>
-              <img class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" alt="iPad Pro" src="promo_ipad_pro__emtduc920o02_large_2x.jpg"/>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- APPLE TV+ ENTERTAINMENT STREAMING CAROUSEL -->
-      <section id="seccion-tv" class="scroll-mt-14 w-full bg-surface-black py-16 overflow-hidden">
-        <!-- Stream Shelf Header -->
-        <div class="max-w-7xl mx-auto px-6 mb-8 flex items-center justify-between">
-          <div class="flex items-center gap-3">
-            <div class="w-9 h-9 rounded-lg bg-surface-tile-dark flex items-center justify-center border-0 shadow-inner">
-              <svg class="w-5 h-5 fill-text-primary" viewbox="0 0 170 170">
-                <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.7-3.04-7.66-7.85-11.88-14.42-6.19-9.69-11.13-20.91-14.82-33.66-3.69-12.75-5.54-24.58-5.54-35.5 0-14.54 3.63-26.68 10.9-36.42 7.27-9.74 16.59-14.73 27.97-14.98 4.35 0 9.38 1.14 15.08 3.42 5.71 2.29 9.58 3.49 11.62 3.6 2.05-.11 6.13-1.37 12.24-3.78 6.11-2.41 11.29-3.5 15.54-3.26 12.06.66 21.73 4.8 28.99 12.44-10.43 6.31-15.54 15.11-15.32 26.4.22 8.7 3.6 15.93 10.14 21.7 6.53 5.77 14.19 8.94 22.98 9.51-2.07 6.53-4.58 13.06-7.53 19.59zm-27.8-106.6c0 6.64-2.44 12.76-7.32 18.36-4.88 5.6-10.87 9.09-17.97 10.47-.22-.87-.33-1.85-.33-2.94 0-6.42 2.61-12.89 7.84-19.4 5.23-6.52 11.21-10.39 17.94-11.62.07 1.74.11 3.48.11 5.24z"></path>
-              </svg>
-            </div>
-            <span class="font-tagline-lg text-tagline-lg text-text-primary font-semibold tracking-tight">tv+</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <button class="w-9 h-9 rounded-full bg-surface-container-high hover:bg-surface-bright flex items-center justify-center text-text-primary transition-colors" id="carousel-prev" aria-label="Anterior">
-              <span class="material-symbols-outlined text-[20px]">chevron_left</span>
-            </button>
-            <button class="w-9 h-9 rounded-full bg-surface-container-high hover:bg-surface-bright flex items-center justify-center text-text-primary transition-colors" id="carousel-next" aria-label="Siguiente">
-              <span class="material-symbols-outlined text-[20px]">chevron_right</span>
-            </button>
-          </div>
-        </div>
-        <!-- Horizontal Streaming Showcase Carousel -->
-        <div class="w-full overflow-x-auto scroll-smooth pb-4 px-6 no-scrollbar flex gap-5 snap-x snap-mandatory" id="carousel-container">
-          <!-- Card 1: Casi hermanos -->
-          <div class="min-w-[320px] md:min-w-[440px] lg:min-w-[540px] aspect-[16/9] relative rounded-xl overflow-hidden snap-center flex-shrink-0 group cursor-pointer shadow-2xl">
-            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Casi hermanos" data-alt="Cinematic wide shot movie still from comedy series Casi Hermanos showing two charismatic lead actors smiling playfully under sun-drenched outdoor light wearing casual western cowboy hats and silver chains, sharp high-key film cinematography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMWQMTNlRzioA3gfNGwk-lD9OoDkarx7cwPwMNK3SjaqTBHYcPRMX1k5yo_CUAngXH1jzK0LugY9uD2EUBuKf2_DyHTyuryVzFbyWB6qWi4qf2rViOZRQwA7fOWPqDIPqxkh3Ph4TSfw7SkoGiUgY2wJaqMGJcBsdmpygzAoB469pUZDy7KtTIPvL3-PHGE4NddeIL14YhC_Au2gg25O54iGkhBadhRPN6cLgzsEFHwh4DdWyj9Gmn"/>
-            <div class="absolute inset-0 bg-gradient-to-t from-surface-black via-surface-black/30 to-transparent"></div>
-            <div class="absolute top-4 right-4 bg-surface-black/60 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-semibold text-text-primary flex items-center gap-1.5">
-              <span class="material-symbols-outlined text-[14px]">tv</span> Apple Original
-            </div>
-            <div class="absolute bottom-6 left-6 right-6 flex items-end justify-between">
-              <div class="flex flex-col">
-                <span class="font-caption-legal text-caption-legal text-primary font-semibold uppercase tracking-wider">Comedia</span>
-                <h4 class="font-tagline-lg text-tagline-lg text-text-primary font-bold mt-0.5">Casi hermanos</h4>
-                <p class="font-body-standard text-body-standard text-text-secondary text-sm mt-0.5 line-clamp-1">Son amigos. ¿Y también familia?</p>
-              </div>
-              <button class="inline-flex items-center gap-1 bg-surface-tile-light hover:bg-white text-on-secondary-fixed font-label-cta text-label-cta px-4 py-2 rounded-full font-semibold transition-transform group-hover:scale-105">
-                <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
-                Stream now
-              </button>
-            </div>
-          </div>
-          <!-- Card 2: Mayday -->
-          <div class="min-w-[320px] md:min-w-[440px] lg:min-w-[540px] aspect-[16/9] relative rounded-xl overflow-hidden snap-center flex-shrink-0 group cursor-pointer shadow-2xl">
-            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Mayday" data-alt="High-octane dramatic movie still from the action thriller Mayday showing Ryan Reynolds and Kenneth Branagh in a tense situation with military tactical helicopters flying in sunset background, dramatic blue and fiery orange lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHHVi7282jPW8GaIUZgscRiWyE10FNf1cp-SVV0bGCo3uAPH1cWhx9oyJo89zp2OqTm7qtXCMYD-_IUnfwSoyBfhpDcmt11GmS2mEy54wUY6vfiuS5Rah9AXojTrarz36t7gBVmtpW9PvtUPqiDXtTJM13-9ABClDvqUbGAtXWiw5S7x17RXhrmcudGsGWv7Nzdu7znm5R8rqnlFFVrxljUm1lbG807dlCiMWagDGn4zV6DiotAofi"/>
-            <div class="absolute inset-0 bg-gradient-to-t from-surface-black via-surface-black/30 to-transparent"></div>
-            <div class="absolute bottom-6 left-6 right-6 flex items-end justify-between">
-              <div class="flex flex-col">
-                <span class="font-caption-legal text-caption-legal text-primary font-semibold uppercase tracking-wider">Acción</span>
-                <h4 class="font-tagline-lg text-tagline-lg text-text-primary font-bold mt-0.5">Mayday</h4>
-                <p class="font-body-standard text-body-standard text-text-secondary text-sm mt-0.5 line-clamp-1">Una amistad peligrosa.</p>
-              </div>
-              <button class="inline-flex items-center gap-1 bg-surface-tile-light hover:bg-white text-on-secondary-fixed font-label-cta text-label-cta px-4 py-2 rounded-full font-semibold transition-transform group-hover:scale-105">
-                <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
-                Stream now
-              </button>
-            </div>
-          </div>
-          <!-- Card 3: Caballos lentos -->
-          <div class="min-w-[320px] md:min-w-[440px] lg:min-w-[540px] aspect-[16/9] relative rounded-xl overflow-hidden snap-center flex-shrink-0 group cursor-pointer shadow-2xl">
-            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Caballos lentos" data-alt="Moody cinematic television still from espionage drama Caballos Lentos featuring Gary Oldman as Jackson Lamb in a gritty London back alleyway with damp pavement reflecting misty neon lights, dark sophisticated atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqhMj0F4Z_mPHbwjmuw_nuUPtlWBkCEXm6yR2qtyTSBUwsZWgOSK1jF0tNgU__2U5_VgeOqptCFGfcqXlNsuo8cEsJ1edhfJJeyAEf17XBq1P9qwqZFCDkrBa_aOaunmgbiAiyljq7-apHdznrpYudqWZzydjN-s0EQH_DWTwF67kgmzLFrvy-MdjfR04FW8LIDXVZY04Div2URtdL7mUqe1qbqhxq4HDyN6wTrC9_TwoPCn32hnyJ"/>
-            <div class="absolute inset-0 bg-gradient-to-t from-surface-black via-surface-black/30 to-transparent"></div>
-            <div class="absolute bottom-6 left-6 right-6 flex items-end justify-between">
-              <div class="flex flex-col">
-                <span class="font-caption-legal text-caption-legal text-primary font-semibold uppercase tracking-wider">Suspenso</span>
-                <h4 class="font-tagline-lg text-tagline-lg text-text-primary font-bold mt-0.5">Caballos lentos</h4>
-                <p class="font-body-standard text-body-standard text-text-secondary text-sm mt-0.5 line-clamp-1">Nueva temporada.</p>
-              </div>
-              <button class="inline-flex items-center gap-1 bg-surface-tile-light hover:bg-white text-on-secondary-fixed font-label-cta text-label-cta px-4 py-2 rounded-full font-semibold transition-transform group-hover:scale-105">
-                <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
-                Stream now
-              </button>
-            </div>
-          </div>
-          <!-- Card 4: Ted Lasso -->
-          <div class="min-w-[320px] md:min-w-[440px] lg:min-w-[540px] aspect-[16/9] relative rounded-xl overflow-hidden snap-center flex-shrink-0 group cursor-pointer shadow-2xl">
-            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Ted Lasso" data-alt="Joyful uplifting television still from comedy Ted Lasso with Jason Sudeikis pointing with his signature whistle and aviators on lush green soccer pitch in London, sunny warm atmospheric haze and vibrant Richmond blue and red stadium colors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZxMnFDGpp4mf3I6L3JW0bOVwm8jTxgSOoktYmf8ymZdyibYryFNqPcJtXQt3_u5VWTYQOajdkwr_X-U_1KxeRVG6lX_j4fXfLhTVpY2SQjKoLLjHo_fwUZMNaariPHiiTKa8Rsg_pUPV6yOcAN6mGTTDyi15XXQV6h4Gi653ELBIURHRwFH3E_KePcVSrvRh8o3k-wEm6v_GPjxGnlx9I8C-XBwnR0zlTEQOgl4MhYFc7w7JsX_Oy"/>
-            <div class="absolute inset-0 bg-gradient-to-t from-surface-black via-surface-black/30 to-transparent"></div>
-            <div class="absolute bottom-6 left-6 right-6 flex items-end justify-between">
-              <div class="flex flex-col">
-                <span class="font-caption-legal text-caption-legal text-primary font-semibold uppercase tracking-wider">Comedia</span>
-                <h4 class="font-tagline-lg text-tagline-lg text-text-primary font-bold mt-0.5">Ted Lasso</h4>
-                <p class="font-body-standard text-body-standard text-text-secondary text-sm mt-0.5 line-clamp-1">¡Más Ted que nunca! La exitosa comedia regresa.</p>
-              </div>
-              <button class="inline-flex items-center gap-1 bg-surface-tile-light hover:bg-white text-on-secondary-fixed font-label-cta text-label-cta px-4 py-2 rounded-full font-semibold transition-transform group-hover:scale-105">
-                <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
-                Stream now
-              </button>
-            </div>
-          </div>
-          <!-- Card 5: Las Azules -->
-          <div class="min-w-[320px] md:min-w-[440px] lg:min-w-[540px] aspect-[16/9] relative rounded-xl overflow-hidden snap-center flex-shrink-0 group cursor-pointer shadow-2xl">
-            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Las Azules" data-alt="Period drama film still from 1970s Mexico City crime series Las Azules showing four courageous female police officers in tailored 70s uniforms marching resolutely down urban cobblestone boulevard, high quality cinematic 35mm grain aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcT156FlVvAMQIZxPIgoG9B2wq_7fzKqJVxncXyC_akQGq9bo2KgPXYq4FRtbNLCoSPGwVxWUmeqOwGzIGpeSvRUnr1KtRIaWw5fHGJWNxl7bJHWCG28BsuRiovlxnnyKf0zf09qdJbZwfI45s6Ge_SdQ7zacq5TxhrCjvzvFSyUe8t7YcQcWHqpfQv3cSfH53sA-vsU6mAwiJWMJZ8kFKBPZUASDNud1JNVNHruycJszTgx2fnVzs"/>
-            <div class="absolute inset-0 bg-gradient-to-t from-surface-black via-surface-black/30 to-transparent"></div>
-            <div class="absolute bottom-6 left-6 right-6 flex items-end justify-between">
-              <div class="flex flex-col">
-                <span class="font-caption-legal text-caption-legal text-primary font-semibold uppercase tracking-wider">Crimen</span>
-                <h4 class="font-tagline-lg text-tagline-lg text-text-primary font-bold mt-0.5">Las Azules</h4>
-                <p class="font-body-standard text-body-standard text-text-secondary text-sm mt-0.5 line-clamp-1">Desafía el sistema. Descubre la verdad.</p>
-              </div>
-              <button class="inline-flex items-center gap-1 bg-surface-tile-light hover:bg-white text-on-secondary-fixed font-label-cta text-label-cta px-4 py-2 rounded-full font-semibold transition-transform group-hover:scale-105">
-                <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
-                Stream now
-              </button>
-            </div>
-          </div>
-          <!-- Card 6: Silo -->
-          <div class="min-w-[320px] md:min-w-[440px] lg:min-w-[540px] aspect-[16/9] relative rounded-xl overflow-hidden snap-center flex-shrink-0 group cursor-pointer shadow-2xl">
-            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Silo" data-alt="Dystopian sci-fi production still from Silo featuring Rebecca Ferguson descending an immense brutalist spiral metal staircase within an underground subterranean concrete bunker shaft, steam venting into atmospheric cold teal light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD767nD0EFAWQVrs67rdG97oNdj7IbdCaHwquaGemVfNfhSTrhMNw7ujYLRfA09hTwjot2zRaLay_AwmOEeq1ITgcPrXCHg_Xy5tK4j3h4UQtuDAgGBkB3et-eeccybZteyCcArcQopjPDYQySlvhSxrRnBLuM1fAId711cPfURgtU4siX25FOsiL2PJP0edb5ERwhY-wfNSg8bCwEayUMmG7vau7vyGvGUcfwheQRTm-2k9NExEjKc"/>
-            <div class="absolute inset-0 bg-gradient-to-t from-surface-black via-surface-black/30 to-transparent"></div>
-            <div class="absolute bottom-6 left-6 right-6 flex items-end justify-between">
-              <div class="flex flex-col">
-                <span class="font-caption-legal text-caption-legal text-primary font-semibold uppercase tracking-wider">Ciencia ficción</span>
-                <h4 class="font-tagline-lg text-tagline-lg text-text-primary font-bold mt-0.5">Silo</h4>
-                <p class="font-body-standard text-body-standard text-text-secondary text-sm mt-0.5 line-clamp-1">La verdad se esconde en el pasado.</p>
-              </div>
-              <button class="inline-flex items-center gap-1 bg-surface-tile-light hover:bg-white text-on-secondary-fixed font-label-cta text-label-cta px-4 py-2 rounded-full font-semibold transition-transform group-hover:scale-105">
-                <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
-                Stream now
-              </button>
-            </div>
-          </div>
-        </div>
-        <!-- Carousel Indicator Strip -->
-        <div class="flex justify-center items-center gap-2 mt-6" id="carousel-indicators">
-          <button class="w-7 h-1.5 rounded-full bg-text-primary transition-all duration-300" data-index="0" aria-label="Slide 1"></button>
-          <button class="w-1.5 h-1.5 rounded-full bg-surface-bright transition-all duration-300" data-index="1" aria-label="Slide 2"></button>
-          <button class="w-1.5 h-1.5 rounded-full bg-surface-bright transition-all duration-300" data-index="2" aria-label="Slide 3"></button>
-          <button class="w-1.5 h-1.5 rounded-full bg-surface-bright transition-all duration-300" data-index="3" aria-label="Slide 4"></button>
-          <button class="w-1.5 h-1.5 rounded-full bg-surface-bright transition-all duration-300" data-index="4" aria-label="Slide 5"></button>
-          <button class="w-1.5 h-1.5 rounded-full bg-surface-bright transition-all duration-300" data-index="5" aria-label="Slide 6"></button>
-        </div>
-      </section>
-
-      <!-- SECCIÓN SOPORTE Y DÓNDE COMPRAR / CONTACTO DIRECTO -->
-      <section id="seccion-soporte" class="scroll-mt-14 w-full bg-gradient-to-b from-surface-black via-surface-container-lowest to-surface-tile-dark py-20 px-6 border-t border-white/5">
-        <div class="max-w-7xl mx-auto">
-          <div class="text-center max-w-2xl mx-auto mb-14">
-            <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-semibold bg-[#25D366]/15 text-[#25D366] border border-[#25D366]/30 mb-4 shadow-sm">
-              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.64c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.3z"/></svg>
-              Canal de Atención Oficial
-            </span>
-            <h2 class="font-headline-tile text-3xl md:text-5xl font-bold tracking-tight text-text-primary mb-3">
-              Soporte y Dónde Comprar
-            </h2>
-            <p class="font-body-standard text-text-secondary text-base md:text-lg">
-              Atención inmediata y personalizada para compras, cotizaciones y asistencia técnica.
-            </p>
-          </div>
-
-          <div id="seccion-donde-comprar" class="scroll-mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
-            <!-- Tarjeta 1: Dónde comprar / Ventas WhatsApp -->
-            <div class="bg-surface-container rounded-2xl p-8 border border-white/10 flex flex-col justify-between hover:border-[#25D366]/40 transition-all duration-300 group hover:-translate-y-1 shadow-xl">
-              <div>
-                <div class="w-14 h-14 rounded-2xl bg-[#25D366]/15 flex items-center justify-center text-[#25D366] mb-6 group-hover:scale-110 transition-transform">
-                  <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.64c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.3z"/></svg>
-                </div>
-                <h3 class="text-2xl font-bold text-text-primary mb-2">Dónde Comprar</h3>
-                <p class="text-text-secondary text-sm leading-relaxed mb-4">
-                  Adquiere tus dispositivos Apple con garantía oficial. Envíos seguros a nivel nacional y asesoramiento en tu compra.
-                </p>
-                <div class="bg-surface-container-high/80 rounded-xl p-3 mb-6 border border-white/5">
-                  <span class="text-xs text-text-secondary uppercase tracking-wider block font-medium">WhatsApp Directo:</span>
-                  <span class="text-xl font-bold text-[#25D366] font-mono">+51 917 160 325</span>
-                </div>
-              </div>
-              <a href="https://wa.me/51917160325?text=Hola%2C%20quisiera%20comprar%20un%20producto%20Apple" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white font-semibold py-3.5 px-6 rounded-full transition-all duration-200 hover:scale-[1.02] shadow-lg shadow-[#25D366]/20">
-                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.64c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.3z"/></svg>
-                Comprar por WhatsApp
-              </a>
-            </div>
-
-            <!-- Tarjeta 2: Soporte Técnico -->
-            <div class="bg-surface-container rounded-2xl p-8 border border-white/10 flex flex-col justify-between hover:border-primary-container/40 transition-all duration-300 group hover:-translate-y-1 shadow-xl">
-              <div>
-                <div class="w-14 h-14 rounded-2xl bg-primary-container/15 flex items-center justify-center text-primary-container mb-6 group-hover:scale-110 transition-transform">
-                  <span class="material-symbols-outlined text-3xl">support_agent</span>
-                </div>
-                <h3 class="text-2xl font-bold text-text-primary mb-2">Soporte Técnico</h3>
-                <p class="text-text-secondary text-sm leading-relaxed mb-4">
-                  Asistencia para configuración de Apple ID, respaldo en iCloud, consultas de batería y diagnóstico de tu equipo.
-                </p>
-                <div class="bg-surface-container-high/80 rounded-xl p-3 mb-6 border border-white/5">
-                  <span class="text-xs text-text-secondary uppercase tracking-wider block font-medium">Asesor de Soporte:</span>
-                  <span class="text-xl font-bold text-text-primary font-mono">917 160 325</span>
-                </div>
-              </div>
-              <a href="https://wa.me/51917160325?text=Hola%2C%20necesito%20ayuda%20de%20soporte%20t%C3%A9cnico%20con%20mi%20dispositivo%20Apple" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-primary-container hover:bg-interactive-hover text-on-primary-container font-semibold py-3.5 px-6 rounded-full transition-all duration-200 hover:scale-[1.02] shadow-lg shadow-primary-container/20">
-                <span class="material-symbols-outlined text-[20px]">chat</span>
-                Chatear con Soporte
-              </a>
-            </div>
-
-            <!-- Tarjeta 3: Llamada Directa -->
-            <div class="bg-surface-container rounded-2xl p-8 border border-white/10 flex flex-col justify-between hover:border-white/30 transition-all duration-300 group hover:-translate-y-1 shadow-xl">
-              <div>
-                <div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
-                  <span class="material-symbols-outlined text-3xl">call</span>
-                </div>
-                <h3 class="text-2xl font-bold text-text-primary mb-2">Llamada Telefónica</h3>
-                <p class="text-text-secondary text-sm leading-relaxed mb-4">
-                  Habla directamente con un asesor para consultas inmediatas, cotizaciones corporativas o urgencias.
-                </p>
-                <div class="bg-surface-container-high/80 rounded-xl p-3 mb-6 border border-white/5">
-                  <span class="text-xs text-text-secondary uppercase tracking-wider block font-medium">Línea Móvil:</span>
-                  <span class="text-xl font-bold text-text-primary font-mono">917 160 325</span>
-                </div>
-              </div>
-              <a href="tel:917160325" class="w-full inline-flex items-center justify-center gap-2 bg-surface-bright hover:bg-white hover:text-black text-white font-semibold py-3.5 px-6 rounded-full transition-all duration-200 hover:scale-[1.02]">
-                <span class="material-symbols-outlined text-[20px]">phone_in_talk</span>
-                Llamar al 917160325
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- LEGAL & REGIONAL DISCLOSURE FOOTNOTE SECTION -->
-      <section class="w-full bg-surface-tile-dark px-6 lg:px-12 py-10">
-        <div class="max-w-7xl mx-auto flex flex-col gap-3 font-caption-legal text-caption-legal text-text-secondary leading-relaxed">
-          <p>
-            1. Según los datos de un estudio realizado por Apple en julio y agosto de 2026 sobre la precisión de la frecuencia cardiaca, usando los dispositivos wearable más vendidos disponibles en el mercado en junio de 2026. Para obtener más información, visita <a class="text-on-surface underline hover:text-text-primary" href="#">apple.com/HRAccuracy</a>.
-          </p>
-          <p>
-            2. Pruebas realizadas por Apple en julio de 2025 usando unidades AirPods Pro 3 enlazadas con unidades iPhone 16 con versiones preliminares de firmware de los AirPods y iOS 26. La prueba de reducción de ruido se realizó según la norma IEC 60268-24. La comparación se realizó con los audífonos internos inalámbricos más vendidos disponibles en el mercado al momento de la prueba. El rendimiento depende de la configuración del dispositivo, el entorno y muchos otros factores.
-          </p>
-          <p>
-            Apple TV requiere suscripción. Sujeto a restricciones y otros <a class="text-on-surface underline hover:text-text-primary" href="#">términos</a>.
-          </p>
-          <p>
-            Las funcionalidades están sujetas a cambios. Algunas funcionalidades, aplicaciones y servicios podrían no estar disponibles en todas las regiones o idiomas.
-          </p>
-        </div>
-      </section>
-
-      <!-- Script for TV Carousel, Navigation Tabs & Mobile Menu -->
-      <script>
-        (function() {
-          // 1. TV Carousel Navigation
-          const container = document.getElementById('carousel-container');
-          const prevBtn = document.getElementById('carousel-prev');
-          const nextBtn = document.getElementById('carousel-next');
-          const indicators = document.querySelectorAll('#carousel-indicators button');
-
-          if (container && prevBtn && nextBtn) {
-            prevBtn.addEventListener('click', () => {
-              container.scrollBy({ left: -460, behavior: 'smooth' });
-            });
-            nextBtn.addEventListener('click', () => {
-              container.scrollBy({ left: 460, behavior: 'smooth' });
-            });
-
-            indicators.forEach((btn, idx) => {
-              btn.addEventListener('click', () => {
-                const cards = container.children;
-                if (cards[idx]) {
-                  cards[idx].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-                }
-              });
-            });
-
-            container.addEventListener('scroll', () => {
-              const scrollLeft = container.scrollLeft;
-              const cardWidth = container.children[0]?.offsetWidth || 460;
-              const activeIndex = Math.min(
-                indicators.length - 1,
-                Math.max(0, Math.round(scrollLeft / cardWidth))
-              );
-              indicators.forEach((dot, i) => {
-                if (i === activeIndex) {
-                  dot.className = 'w-7 h-1.5 rounded-full bg-text-primary transition-all duration-300';
-                } else {
-                  dot.className = 'w-1.5 h-1.5 rounded-full bg-surface-bright transition-all duration-300';
-                }
-              });
-            });
-          }
-
-          // 2. Mobile Menu Toggle
-          const mobileBtn = document.getElementById('mobile-menu-btn');
-          const mobileMenu = document.getElementById('mobile-menu');
-          const menuIcon = document.getElementById('menu-icon');
-
-          if (mobileBtn && mobileMenu && menuIcon) {
-            mobileBtn.addEventListener('click', (e) => {
-              e.stopPropagation();
-              const isHidden = mobileMenu.classList.contains('hidden');
-              if (isHidden) {
-                mobileMenu.classList.remove('hidden');
-                mobileMenu.classList.add('flex');
-                menuIcon.textContent = 'close';
-              } else {
-                mobileMenu.classList.add('hidden');
-                mobileMenu.classList.remove('flex');
-                menuIcon.textContent = 'menu';
-              }
-            });
-
-            // Close mobile menu when clicking any link
-            document.querySelectorAll('.mobile-nav-link').forEach(link => {
-              link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                mobileMenu.classList.remove('flex');
-                menuIcon.textContent = 'menu';
-              });
-            });
-
-            // Close on click outside
-            document.addEventListener('click', (e) => {
-              if (!mobileMenu.contains(e.target) && !mobileBtn.contains(e.target)) {
-                mobileMenu.classList.add('hidden');
-                mobileMenu.classList.remove('flex');
-                menuIcon.textContent = 'menu';
-              }
-            });
-          }
-
-          // 3. Active Nav Item Highlighting on Scroll (ScrollSpy)
-          const sections = [
-            { id: 'seccion-iphone', navLink: document.querySelector('#desktop-nav a[href="#seccion-iphone"]') },
-            { id: 'seccion-watch', navLink: document.querySelector('#desktop-nav a[href="#seccion-watch"]') },
-            { id: 'seccion-airpods', navLink: document.querySelector('#desktop-nav a[href="#seccion-airpods"]') },
-            { id: 'seccion-mac', navLink: document.querySelector('#desktop-nav a[href="#seccion-mac"]') },
-            { id: 'seccion-ipad', navLink: document.querySelector('#desktop-nav a[href="#seccion-ipad"]') },
-            { id: 'seccion-tv', navLink: document.querySelector('#desktop-nav a[href="#seccion-tv"]') },
-            { id: 'seccion-soporte', navLink: document.querySelector('#desktop-nav a[href="#seccion-soporte"]') },
-            { id: 'seccion-donde-comprar', navLink: document.querySelector('#desktop-nav a[href="#seccion-donde-comprar"]') }
-          ];
-
-          const allNavLinks = document.querySelectorAll('#desktop-nav .nav-item');
-
-          function setActiveLink(activeLink) {
-            if (!activeLink) return;
-            allNavLinks.forEach(link => {
-              link.classList.remove('text-text-primary', 'font-bold');
-              link.classList.add('text-on-surface-variant');
-            });
-            activeLink.classList.remove('text-on-surface-variant');
-            activeLink.classList.add('text-text-primary', 'font-bold');
-          }
-
-          window.addEventListener('scroll', () => {
-            const scrollPos = window.scrollY + 120;
-            let current = null;
-
-            for (const sec of sections) {
-              const el = document.getElementById(sec.id);
-              if (el && el.offsetTop <= scrollPos) {
-                current = sec.navLink;
-              }
-            }
-
-            if (current) {
-              setActiveLink(current);
-            }
-          });
-        })();
-      </script>
+    <div class="job rv">
+      <div class="job-h"><div><h3>Jefe de Ventas Máster</h3><p class="co">Verisure Alarmas</p></div><span class="when">Jul 2025 — Sep 2025 · Lima</span></div>
+      <ul>
+        <li>Liderazgo del equipo comercial para cumplimiento y superación de metas de ventas.</li>
+        <li>Gestión de relaciones estratégicas con clientes corporativos e individuales.</li>
+        <li>Supervisión de procesos de negociación y fidelización de cartera.</li>
+      </ul>
     </div>
-  </main>
 
-  <footer class="w-full bg-surface-tile-dark text-text-secondary font-caption-legal text-caption-legal">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12 pt-space-xl pb-space-lg">
-      <div class="grid grid-cols-2 md:grid-cols-5 gap-space-lg pb-space-xl">
-        <div class="flex flex-col gap-space-sm">
-          <h3 class="font-caption-legal text-caption-legal text-text-primary font-semibold">Descubrir</h3>
-          <a class="hover:text-text-primary transition-colors" data-path="mac" href="#">Mac</a>
-          <a class="hover:text-text-primary transition-colors" data-path="ipad" href="#">iPad</a>
-          <a class="hover:text-text-primary transition-colors" data-path="iphone" href="#">iPhone</a>
-          <a class="hover:text-text-primary transition-colors" data-path="watch" href="#">Watch</a>
-          <a class="hover:text-text-primary transition-colors" data-path="airpods" href="#">AirPods</a>
-          <a class="hover:text-text-primary transition-colors" data-path="tv-y-casa" href="#">TV y Casa</a>
-        </div>
-        <div class="flex flex-col gap-space-sm">
-          <h3 class="font-caption-legal text-caption-legal text-text-primary font-semibold">Entretenimiento</h3>
-          <a class="hover:text-text-primary transition-colors" data-path="entretenimiento" href="#">Apple One</a>
-          <a class="hover:text-text-primary transition-colors" data-path="entretenimiento" href="#">Apple TV+</a>
-          <a class="hover:text-text-primary transition-colors" data-path="entretenimiento" href="#">Apple Music</a>
-          <a class="hover:text-text-primary transition-colors" data-path="entretenimiento" href="#">Apple Arcade</a>
-          <a class="hover:text-text-primary transition-colors" data-path="entretenimiento" href="#">Apple Podcasts</a>
-        </div>
-        <div class="flex flex-col gap-space-sm">
-          <h3 class="font-caption-legal text-caption-legal text-text-primary font-semibold">Cuenta y Servicios</h3>
-          <a class="hover:text-text-primary transition-colors" data-path="cuenta" href="#">Administrar Apple Account</a>
-          <a class="hover:text-text-primary transition-colors" data-path="cuenta" href="#">iCloud.com</a>
-          <a class="hover:text-text-primary transition-colors" data-path="soporte" href="#">Facturación y Compras</a>
-        </div>
-        <div class="flex flex-col gap-space-sm">
-          <h3 class="font-caption-legal text-caption-legal text-text-primary font-semibold">Valores de Apple</h3>
-          <a class="hover:text-text-primary transition-colors" data-path="valores" href="#">Accesibilidad</a>
-          <a class="hover:text-text-primary transition-colors" data-path="valores" href="#">Medio ambiente</a>
-          <a class="hover:text-text-primary transition-colors" data-path="valores" href="#">Privacidad</a>
-          <a class="hover:text-text-primary transition-colors" data-path="donde-comprar" href="#">Dónde comprar</a>
-        </div>
-        <div class="flex flex-col gap-space-sm">
-          <h3 class="font-caption-legal text-caption-legal text-text-primary font-semibold">Acerca de Apple</h3>
-          <a class="hover:text-text-primary transition-colors" data-path="soporte" href="#">Newsroom</a>
-          <a class="hover:text-text-primary transition-colors" data-path="soporte" href="#">Liderazgo de Apple</a>
-          <a class="hover:text-text-primary transition-colors" data-path="soporte" href="#">Oportunidades laborales</a>
-          <a class="hover:text-text-primary transition-colors" data-path="soporte" href="#">Inversionistas</a>
-        </div>
-      </div>
-      <div class="pt-space-md pb-space-sm flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
-        <div class="flex items-center gap-space-xs">
-          <span class="material-symbols-outlined text-[16px] text-text-secondary">language</span>
-          <a class="hover:text-text-primary transition-colors" data-path="region-selector" href="#">América Latina y el Caribe</a>
-        </div>
-        <div class="flex flex-wrap gap-x-space-md gap-y-space-xs text-text-secondary">
-          <a class="hover:text-text-primary transition-colors" data-path="privacidad" href="#">Política de privacidad</a>
-          <a class="hover:text-text-primary transition-colors" data-path="terminos" href="#">Aviso legal</a>
-          <a class="hover:text-text-primary transition-colors" data-path="mapa-del-sitio" href="#">Mapa del sitio</a>
-        </div>
-      </div>
-      <div class="pt-space-xs text-text-secondary opacity-70 flex flex-col md:flex-row md:items-center justify-between gap-space-xs">
-        <p>Copyright © 2025 Apple Inc. Todos los derechos reservados.</p>
-        <p>Apple Latin America Operations, Inc.</p>
-      </div>
+    <div class="job rv">
+      <div class="job-h"><div><h3>Capacitador Comercial</h3><p class="co">Verisure Alarmas</p></div><span class="when">Jul 2021 — Dic 2021 · Lima</span></div>
+      <ul>
+        <li>Diseño e implementación de programas formativos en ventas y liderazgo.</li>
+        <li>Mejora del desempeño y productividad de equipos comerciales.</li>
+      </ul>
     </div>
-  <!-- Botón Flotante de WhatsApp -->
-  <aside aria-label="Contacto por WhatsApp" class="fixed bottom-6 right-6 z-50">
-    <a href="https://wa.me/51917160325?text=Hola%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20productos%20Apple" 
-       target="_blank" 
-       rel="noopener noreferrer"
-       class="group relative flex items-center gap-3 bg-[#25D366] hover:bg-[#20ba59] text-white px-4 py-3 rounded-full shadow-[0_10px_35px_rgba(37,211,102,0.45)] transition-all duration-300 hover:scale-105 active:scale-95"
-       title="Chatear por WhatsApp: 917160325">
-      <span class="relative flex h-3 w-3">
-        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-        <span class="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
-      </span>
-      <svg class="w-6 h-6 fill-white shrink-0" viewBox="0 0 24 24">
-        <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.64c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.3z"/>
-      </svg>
-      <div class="flex flex-col text-left leading-tight">
-        <span class="text-[10px] text-white/90 font-medium uppercase tracking-wider">¿Deseas comprar?</span>
-        <span class="text-sm font-bold tracking-tight flex items-center gap-1.5">WhatsApp <span class="bg-black/25 px-1.5 py-0.5 rounded text-xs font-mono font-normal">917160325</span></span>
+
+    <div class="job rv">
+      <div class="job-h"><div><h3>Jefe de Ventas Máster</h3><p class="co">Verisure Alarmas</p></div><span class="when">Ene 2021 · Lima</span></div>
+      <ul>
+        <li>Coordinación de fuerza de ventas y control de indicadores comerciales.</li>
+        <li>Identificación de oportunidades de negocio y soluciones personalizadas al cliente.</li>
+      </ul>
+    </div>
+
+    <div class="job rv">
+      <div class="job-h"><div><h3>Supervisor de Campo</h3><p class="co">Moda &amp; Textil</p></div><span class="when">Jun 2018 — Dic 2021 · Lima</span></div>
+      <ul>
+        <li>Supervisión de equipos de ventas en campo para sector moda y textil.</li>
+        <li>Control de metas, reportes y estrategias de captación de clientes.</li>
+      </ul>
+    </div>
+
+    <div class="job rv">
+      <div class="job-h"><div><h3>Supervisor de Ventas</h3><p class="co">Touring y Automóvil Club del Perú</p></div><span class="when">Jun 2018 — Dic 2021 · Lima</span></div>
+      <ul>
+        <li>Liderazgo de equipo comercial para venta de servicios de asistencia y seguros.</li>
+        <li>Asesoría y fidelización de socios, superando metas de captación mensual.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROYECTOS -->
+<section class="sec" id="proyectos">
+  <p class="kicker rv">03 / <span data-i="k3">PROYECTOS</span></p>
+  <h2 class="h2 rv" data-i="t3">Proyectos</h2>
+  <p class="lead rv" data-i="l3">Logros reales y servicios disponibles para ti.</p>
+  <div class="projects">
+
+    <article class="proj rv">
+      <div class="proj-img">
+        <div style="background:radial-gradient(circle at 30% 40%,#ff8a3d,transparent 55%),radial-gradient(circle at 75% 70%,#7a2a00,transparent 50%),#1a0d05">
+          <svg viewBox="0 0 160 90" style="width:100%;height:100%"><g fill="none" stroke="#ff6a00" stroke-opacity=".4"><circle cx="80" cy="45" r="35"/><circle cx="80" cy="45" r="20"/><line x1="80" y1="10" x2="80" y2="80" stroke-opacity=".3"/><line x1="45" y1="45" x2="115" y2="45" stroke-opacity=".3"/></g><text x="80" y="50" text-anchor="middle" fill="#ff6a00" font-size="14" font-weight="bold" font-family="monospace">+50</text></svg>
+        </div>
+        <span>Logro</span>
       </div>
-    </a>
-  </aside>
+      <div class="proj-b"><span class="n">01</span><h3>Equipo de Alto Rendimiento</h3><p>Formé y lideré equipos de más de 50 vendedores en Verisure, superando metas comerciales mes a mes con programas de capacitación propios.</p><div class="stack"><span>Liderazgo</span><span>Ventas</span><span>Capacitación</span></div></div>
+    </article>
+
+    <article class="proj rv">
+      <div class="proj-img">
+        <div style="background:linear-gradient(135deg,#1a0a00,#0d0d0d)">
+          <svg viewBox="0 0 160 90" style="width:100%;height:100%"><g stroke="#ff6a00" stroke-opacity=".5" fill="none"><path d="M20 70 Q50 20 80 45 T140 25"/><path d="M20 80 Q50 35 80 55 T140 38"/></g><text x="80" y="52" text-anchor="middle" fill="#fff" font-size="11" font-family="monospace" opacity=".6">crecimiento</text></svg>
+        </div>
+        <span>Logro</span>
+      </div>
+      <div class="proj-b"><span class="n">02</span><h3>Gestión Comercial Integral</h3><p>21 años gestionando carteras de clientes corporativos en sectores de seguros, alarmas y textil, con resultados sostenidos en fidelización y captación.</p><div class="stack"><span>Negociación</span><span>Fidelización</span><span>CRM</span></div></div>
+    </article>
+
+    <article class="proj rv">
+      <div class="proj-img">
+        <div style="background:conic-gradient(from 180deg at 50% 60%,#ff6a00,#1a1a1a,#ff8a3d,#0a0a0a)">
+          <svg viewBox="0 0 160 90" style="width:100%;height:100%"><rect x="30" y="20" width="100" height="55" rx="6" fill="none" stroke="#fff" stroke-opacity=".2"/><rect x="40" y="30" width="80" height="8" rx="3" fill="#ff6a00" opacity=".7"/><rect x="40" y="45" width="55" height="6" rx="3" fill="#fff" opacity=".2"/><rect x="40" y="57" width="70" height="6" rx="3" fill="#fff" opacity=".15"/></svg>
+        </div>
+        <span>Servicio</span>
+      </div>
+      <div class="proj-b"><span class="n">03</span><h3>Consultoría Comercial para PYMEs</h3><p>Ayudo a pequeñas y medianas empresas a estructurar su proceso de ventas, entrenar a su equipo y alcanzar metas con estrategias probadas.</p><div class="stack"><span>Consultoría</span><span>Estrategia</span><span>PYMEs</span></div><div class="proj-l"><a href="#contacto">Contáctame ↗</a></div></div>
+    </article>
+
+    <article class="proj rv">
+      <div class="proj-img">
+        <div style="background:repeating-linear-gradient(45deg,#141414 0 14px,#1c1c1c 14px 28px)">
+          <svg viewBox="0 0 160 90" style="width:100%;height:100%"><rect x="25" y="15" width="110" height="65" rx="8" fill="none" stroke="#ff6a00" stroke-opacity=".5" stroke-width="1.5"/><circle cx="80" cy="47" r="18" fill="none" stroke="#ff6a00" stroke-opacity=".4"/><text x="80" y="52" text-anchor="middle" fill="#ff6a00" font-size="10" font-family="monospace">web</text></svg>
+        </div>
+        <span>Servicio</span>
+      </div>
+      <div class="proj-b"><span class="n">04</span><h3>Páginas Web &amp; Presencia Digital</h3><p>Creo páginas web profesionales para personas y negocios que quieren proyectar credibilidad, captar clientes y destacar en el mundo digital.</p><div class="stack"><span>Web</span><span>Marketing</span><span>Marca personal</span></div><div class="proj-l"><a href="#contacto">Contáctame ↗</a></div></div>
+    </article>
+
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="sec" id="contacto">
+  <div class="contact rv">
+    <p class="kicker">04 / <span data-i="k4">CONTACTO</span></p>
+    <h2 class="h2"><span data-i="t4a">¿Trabajamos</span> <span data-i="t4b">juntos?</span></h2>
+    <p class="lead" style="margin:12px auto 0" data-i="l4">Cuéntame tu idea y te respondo en menos de 24 horas.</p>
+    <div class="ctas">
+      <a class="btn btn-o" href="mailto:henrycurto@gmail.com" data-i="cta3">Escríbeme</a>
+      <a class="btn btn-d" href="https://wa.me/51934933336" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/henry-curto-castel-79a1064b" target="_blank" rel="noopener" title="LinkedIn">in</a>
+      <a href="https://www.facebook.com/profile.php?id=61589556247756" target="_blank" rel="noopener" title="Facebook">fb</a>
+      <a href="https://www.youtube.com/@HobbiesShowIA" target="_blank" rel="noopener" title="YouTube · Hobbies Show">yt</a>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Henry Curto · <span data-i="foot">Hecho con pasión</span></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ---------- Terreno 3D en malla naranja ---------- */
+(function terrain() {
+  const canvas = document.getElementById('terrain');
+  if (!window.THREE) { canvas.style.background = 'radial-gradient(ellipse at 50% 100%, rgba(255,106,0,.35), transparent 60%)'; return; }
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  const scene = new THREE.Scene();
+  scene.fog = new THREE.Fog(0x0a0a0a, 30, 70);
+  const camera = new THREE.PerspectiveCamera(60, 1, 0.1, 120);
+  camera.position.set(0, 2.2, 10);
+  camera.lookAt(0, 1.5, -10);
+
+  // Luces para que las caras del terreno tengan relieve
+  scene.add(new THREE.AmbientLight(0xffffff, 0.35));
+  const sun = new THREE.DirectionalLight(0xffe0c0, 0.55);
+  sun.position.set(-6, 10, 6); scene.add(sun);
+
+  // Terreno: relleno naranja sólido + malla clara encima
+  const W = 80, D = 50, SEG_W = 80, SEG_D = 50;
+  const geo = new THREE.PlaneGeometry(W, D, SEG_W, SEG_D);
+  geo.rotateX(-Math.PI / 2);
+  const base = geo.attributes.position.array.slice();
+  const solid = new THREE.Mesh(geo, new THREE.MeshPhongMaterial({
+    color: 0xf06a00, emissive: 0x3d1500, flatShading: true, shininess: 10,
+    polygonOffset: true, polygonOffsetFactor: 1, polygonOffsetUnits: 1
+  }));
+  const wire = new THREE.Mesh(geo, new THREE.MeshBasicMaterial({ color: 0xffc08a, wireframe: true, transparent: true, opacity: 0.35 }));
+  const terrainGroup = new THREE.Group();
+  terrainGroup.add(solid, wire);
+  terrainGroup.position.set(0, -1.5, -12);
+  scene.add(terrainGroup);
+
+  // Estrellas
+  const sg = new THREE.BufferGeometry(), sp = [];
+  for (let i = 0; i < 700; i++) sp.push((Math.random() - .5) * 120, Math.random() * 40 + 3, -Math.random() * 50 - 10);
+  sg.setAttribute('position', new THREE.Float32BufferAttribute(sp, 3));
+  scene.add(new THREE.Points(sg, new THREE.PointsMaterial({ color: 0xffffff, size: 0.06, transparent: true, opacity: 0.7 })));
+
+  // Constelaciones: nodos naranjas que flotan y se unen con líneas si están cerca
+  const N = 26, nodes = [];
+  for (let i = 0; i < N; i++) nodes.push({
+    x: (Math.random() - .5) * 34, y: Math.random() * 9 + 4, z: -Math.random() * 10 - 8,
+    vx: (Math.random() - .5) * 0.01, vy: (Math.random() - .5) * 0.006
+  });
+  const nodeGeo = new THREE.BufferGeometry();
+  nodeGeo.setAttribute('position', new THREE.Float32BufferAttribute(new Array(N * 3).fill(0), 3));
+  scene.add(new THREE.Points(nodeGeo, new THREE.PointsMaterial({ color: 0xff8a3d, size: 0.18, transparent: true, opacity: 0.95 })));
+  const MAXL = N * N;
+  const lineGeo = new THREE.BufferGeometry();
+  lineGeo.setAttribute('position', new THREE.Float32BufferAttribute(new Array(MAXL * 6).fill(0), 3));
+  const lines = new THREE.LineSegments(lineGeo, new THREE.LineBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.18 }));
+  scene.add(lines);
+  function updateConstellations() {
+    const np = nodeGeo.attributes.position, lp = lineGeo.attributes.position;
+    nodes.forEach((n, i) => {
+      n.x += n.vx; n.y += n.vy;
+      if (Math.abs(n.x) > 17) n.vx *= -1;
+      if (n.y < 4 || n.y > 13) n.vy *= -1;
+      np.setXYZ(i, n.x, n.y, n.z);
+    });
+    let k = 0;
+    for (let i = 0; i < N; i++) for (let j = i + 1; j < N; j++) {
+      const a = nodes[i], b = nodes[j];
+      if (Math.hypot(a.x - b.x, a.y - b.y, a.z - b.z) < 5) {
+        lp.setXYZ(k++, a.x, a.y, a.z); lp.setXYZ(k++, b.x, b.y, b.z);
+      }
+    }
+    lineGeo.setDrawRange(0, k);
+    np.needsUpdate = lp.needsUpdate = true;
+  }
+
+  let mx = 0, my = 0;
+  addEventListener('pointermove', e => { mx = e.clientX / innerWidth - .5; my = e.clientY / innerHeight - .5; });
+
+  function resize() {
+    const w = canvas.clientWidth, h = canvas.clientHeight;
+    renderer.setSize(w, h, false);
+    camera.aspect = w / h; camera.updateProjectionMatrix();
+  }
+  addEventListener('resize', resize); resize();
+
+  const pos = geo.attributes.position;
+  function frame(t) {
+    const time = t * 0.0003;
+    for (let i = 0; i < pos.count; i++) {
+      const x = base[i * 3], z = base[i * 3 + 2];
+      const far = (D / 2 - z) / D; // 0 cerca, 1 al fondo: las montañas crecen hacia el horizonte
+      const amp = 0.6 + far * 3.2;
+      const y = (Math.sin(x * 0.3 + time * 2) * Math.cos(z * 0.25 + time) * 0.9
+              + Math.sin(x * 0.8 + z * 0.5 + time * 3) * 0.35
+              + Math.sin(x * 1.9 - z * 1.3 + time) * 0.12) * amp;
+      pos.setY(i, y);
+    }
+    pos.needsUpdate = true;
+    geo.computeVertexNormals();
+    updateConstellations();
+    camera.position.x += (mx * 2 - camera.position.x) * 0.04;
+    camera.position.y += (2.2 - my * 1 - camera.position.y) * 0.04;
+    camera.lookAt(0, 1.5, -10);
+    renderer.render(scene, camera);
+    if (!reduce) requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+/* ---------- Entrada del hero ---------- */
+function heroIn() {
+  const items = [...document.querySelectorAll('.h-in, .h-name, .h-photo')];
+  items.forEach(el => { el.style.opacity = 0; el.style.transform = el.classList.contains('h-name') ? 'translateY(110%)' : 'translateY(24px)'; });
+  items.forEach((el, i) => setTimeout(() => {
+    el.style.transition = 'opacity .9s ease, transform 1s cubic-bezier(.2,.8,.2,1)';
+    el.style.opacity = 1; el.style.transform = 'none';
+  }, 150 + i * 90));
+  setTimeout(() => document.querySelectorAll('[data-c]').forEach(count), 900);
+}
+function count(el) {
+  const end = +el.dataset.c, suf = el.dataset.s || '', t0 = performance.now();
+  (function step(t) {
+    const p = Math.min((t - t0) / 1600, 1);
+    el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))) + suf;
+    if (p < 1) requestAnimationFrame(step);
+  })(t0);
+}
+reduce ? document.querySelectorAll('[data-c]').forEach(el => el.textContent = el.dataset.c + el.dataset.s) : heroIn();
+
+/* ---------- Texto que se escribe solo ---------- */
+const PHRASES = {
+  es: ['Desarrollo equipos de alto rendimiento', 'Marketing que genera resultados reales', 'Páginas web estáticas y dinámicas', 'Software a medida para tu negocio', 'Estrategia comercial · Ventas · Liderazgo'],
+  en: ['I build brands people remember', 'I turn ideas into results', 'Strategy · Creativity · Impact']
+};
+let lang = 'es', pi = 0, ci = 0, del = false;
+(function type() {
+  const list = PHRASES[lang], word = list[pi % list.length];
+  document.getElementById('typed').textContent = word.slice(0, ci);
+  if (!del && ci < word.length) ci++;
+  else if (!del) { del = true; return setTimeout(type, 1800); }
+  else if (ci > 0) ci--;
+  else { del = false; pi++; }
+  setTimeout(type, del ? 30 : 60);
+})();
+
+/* ---------- Cintas de habilidades ---------- */
+const S1 = ['Marketing', 'Liderazgo', 'Ventas', 'Equipos', 'Páginas web', 'Software', 'Gestión comercial', 'Alto rendimiento'];
+const S2 = ['Negociación', 'Creatividad', 'Análisis', 'Oratoria', 'Innovación', 'Gestión', 'Networking'];
+const fill = (id, arr) => document.getElementById(id).innerHTML = [...arr, ...arr, ...arr, ...arr].map(s => `<span>${s}</span>`).join('');
+fill('m1', S1); fill('m2', S2);
+
+/* ---------- Aparecer al bajar ---------- */
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+}), { threshold: 0.15 });
+document.querySelectorAll('.rv').forEach((el, i) => { el.style.transitionDelay = (i % 3) * 0.08 + 's'; io.observe(el); });
+
+/* ---------- Nav: fondo al bajar + sección activa + línea de tiempo ---------- */
+const nav = document.getElementById('nav'), links = [...document.querySelectorAll('.links a')];
+const tl = document.getElementById('timeline'), tlFill = document.getElementById('tlFill');
+addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', scrollY > 40);
+  let cur = 'hero';
+  document.querySelectorAll('section[id]').forEach(s => { if (scrollY >= s.offsetTop - 200) cur = s.id; });
+  links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
+  const r = tl.getBoundingClientRect(), p = Math.min(Math.max((innerHeight * .6 - r.top) / r.height, 0), 1);
+  tlFill.style.height = p * 100 + '%';
+}, { passive: true });
+
+/* ---------- Idioma ES / EN ---------- */
+const EN = {
+  nav1: 'Home', nav2: 'About', nav3: 'Experience', nav4: 'Projects', nav5: 'Contact', talk: "Let's talk",
+  open: 'OPEN TO WORK', hi: "Hi, I'm", role: 'Marketing & Commercial Management',
+  cta1: 'See projects', cta2: 'Contact me',
+  k1: 'ABOUT ME', t1: 'About me',
+  about0: 'Professional focused on building high-performance sales teams.',
+  about1: 'Professional with over <em>21 years of experience</em> in intangible sales, commercial leadership and high-performance team development.',
+  about2: 'Specialist in negotiation, commercial advisory and corporate client retention. With a proven track record of meeting and exceeding sales targets, I design and implement training programs that improve team performance and productivity.',
+  c1: 'Available',
+  a1: 'Sales Training', a1d: 'Design and implementation of training programs to improve team commercial performance.',
+  a2: 'Commercial Management', a2d: 'Leadership of sales processes, negotiation with corporate and individual clients, and goal achievement.',
+  a3: 'Digital Marketing', a3d: 'Personal branding strategy, social media presence and professional website creation.',
+  k2: 'EXPERIENCE', t2: 'Experience', l2: "Where I've worked and what I've achieved.", now: 'CURRENT',
+  k3: 'PROJECTS', t3: 'Projects', l3: 'Real achievements and services available for you.',
+  k4: 'CONTACT', t4a: "Let's work", t4b: 'together?', l4: "Tell me your idea and I'll reply within 24 hours.", cta3: 'Write me', foot: 'Made with passion'
+};
+const ES = {};
+document.querySelectorAll('[data-i]').forEach(el => { ES[el.dataset.i] ??= el.innerHTML; });
+document.querySelectorAll('[data-lang]').forEach(b => b.onclick = () => {
+  lang = b.dataset.lang; ci = 0; del = false;
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-lang]').forEach(x => x.classList.toggle('on', x === b));
+  const dict = lang === 'en' ? EN : ES;
+  document.querySelectorAll('[data-i]').forEach(el => { if (dict[el.dataset.i]) el.innerHTML = dict[el.dataset.i]; });
+});
+</script>
 </body>
 </html>
