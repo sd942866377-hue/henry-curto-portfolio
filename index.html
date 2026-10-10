@@ -213,7 +213,7 @@
         <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-gradient-to-b from-primary/10 via-primary/5 to-transparent rounded-full blur-[120px] pointer-events-none"></div>
         <!-- Header Copy Stack -->
         <div class="relative z-10 flex flex-col items-center text-center px-6 max-w-4xl mx-auto">
-          <h1 class="font-display-hero text-display-hero text-text-primary tracking-tight font-bold">
+          <h1 class="font-display-hero text-display-hero-mobile md:text-display-hero text-text-primary tracking-tight font-bold">
             iPhone 18 Pro
           </h1>
           <p class="font-tagline-lg text-tagline-lg text-text-primary mt-2 font-normal">
@@ -238,7 +238,7 @@
           <div class="relative w-full aspect-[16/9] md:aspect-[21/9] flex items-center justify-center">
             <!-- Giant Chrome Monolithic PRO lettermark in background -->
             <div class="absolute inset-x-0 bottom-4 md:bottom-8 flex justify-center items-center pointer-events-none select-none overflow-hidden opacity-90">
-              <span class="font-display-hero text-[140px] md:text-[280px] lg:text-[340px] leading-none font-black tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-surface-tile-light via-secondary to-surface-bright/20 filter drop-shadow-[0_20px_50px_rgba(255,255,255,0.12)]">
+              <span class="font-display-hero text-[80px] md:text-[260px] lg:text-[340px] leading-none font-black tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-surface-tile-light via-secondary to-surface-bright/20 filter drop-shadow-[0_20px_50px_rgba(255,255,255,0.12)]">
                 PRO
               </span>
             </div>
@@ -267,10 +267,10 @@
             <svg class="w-7 h-7 fill-text-primary inline-block mb-1" viewbox="0 0 170 170">
               <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.7-3.04-7.66-7.85-11.88-14.42-6.19-9.69-11.13-20.91-14.82-33.66-3.69-12.75-5.54-24.58-5.54-35.5 0-14.54 3.63-26.68 10.9-36.42 7.27-9.74 16.59-14.73 27.97-14.98 4.35 0 9.38 1.14 15.08 3.42 5.71 2.29 9.58 3.49 11.62 3.6 2.05-.11 6.13-1.37 12.24-3.78 6.11-2.41 11.29-3.5 15.54-3.26 12.06.66 21.73 4.8 28.99 12.44-10.43 6.31-15.54 15.11-15.32 26.4.22 8.7 3.6 15.93 10.14 21.7 6.53 5.77 14.19 8.94 22.98 9.51-2.07 6.53-4.58 13.06-7.53 19.59zm-27.8-106.6c0 6.64-2.44 12.76-7.32 18.36-4.88 5.6-10.87 9.09-17.97 10.47-.22-.87-.33-1.85-.33-2.94 0-6.42 2.61-12.89 7.84-19.4 5.23-6.52 11.21-10.39 17.94-11.62.07 1.74.11 3.48.11 5.24z"></path>
             </svg>
-            <span class="font-headline-tile text-headline-tile font-bold tracking-tight text-text-primary">
+            <span class="font-headline-tile text-headline-tile-mobile md:text-headline-tile font-bold tracking-tight text-text-primary">
               WATCH
             </span>
-            <span class="font-headline-tile text-headline-tile font-semibold tracking-wide text-error ml-1">
+            <span class="font-headline-tile text-headline-tile-mobile md:text-headline-tile font-semibold tracking-wide text-error ml-1">
               SERIES 12
             </span>
           </div>
@@ -338,9 +338,9 @@
       <section class="w-full bg-surface-black px-3 md:px-6 py-3">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-3">
           <!-- Bento Tile 1: AirPods 5 (Dark Editorial Portrait) -->
-          <div id="seccion-airpods" class="scroll-mt-14 group relative bg-surface-tile-dark rounded-none md:rounded-lg overflow-hidden min-h-[580px] flex flex-col justify-between p-8 md:p-12 text-center transition-all duration-300">
+          <div id="seccion-airpods" class="scroll-mt-14 group relative bg-surface-tile-dark rounded-none md:rounded-lg overflow-hidden min-h-[480px] md:min-h-[580px] flex flex-col justify-between p-8 md:p-12 text-center transition-all duration-300">
             <div class="relative z-10 flex flex-col items-center">
-              <h3 class="font-headline-tile text-headline-tile text-text-primary font-bold tracking-tight">
+              <h3 class="font-headline-tile text-headline-tile-mobile md:text-headline-tile text-text-primary font-bold tracking-tight">
                 AirPods 5
               </h3>
               <p class="font-tagline-sm text-tagline-sm text-text-primary mt-2 max-w-sm">
@@ -366,9 +366,9 @@
           </div>
 
           <!-- Bento Tile 2: MacBook Air (Light Minimal Tile) -->
-          <div id="seccion-mac" class="scroll-mt-14 group relative bg-surface-tile-light rounded-none md:rounded-lg overflow-hidden min-h-[580px] flex flex-col justify-between p-8 md:p-12 text-center transition-all duration-300">
+          <div id="seccion-mac" class="scroll-mt-14 group relative bg-surface-tile-light rounded-none md:rounded-lg overflow-hidden min-h-[480px] md:min-h-[580px] flex flex-col justify-between p-8 md:p-12 text-center transition-all duration-300">
             <div class="relative z-10 flex flex-col items-center">
-              <h3 class="font-headline-tile text-headline-tile text-on-secondary-fixed font-bold tracking-tight">
+              <h3 class="font-headline-tile text-headline-tile-mobile md:text-headline-tile text-on-secondary-fixed font-bold tracking-tight">
                 MacBook Air
               </h3>
               <p class="font-tagline-sm text-tagline-sm text-on-secondary-fixed-variant mt-2">
@@ -390,11 +390,11 @@
           </div>
 
           <!-- Bento Tile 3: iPad Air (Light Minimal Color Burst) -->
-          <div id="seccion-ipad" class="scroll-mt-14 group relative bg-surface-tile-light rounded-none md:rounded-lg overflow-hidden min-h-[580px] flex flex-col justify-between p-8 md:p-12 text-center transition-all duration-300">
+          <div id="seccion-ipad" class="scroll-mt-14 group relative bg-surface-tile-light rounded-none md:rounded-lg overflow-hidden min-h-[480px] md:min-h-[580px] flex flex-col justify-between p-8 md:p-12 text-center transition-all duration-300">
             <div class="relative z-10 flex flex-col items-center">
               <div class="flex items-center justify-center gap-1.5">
-                <span class="font-headline-tile text-headline-tile text-on-secondary-fixed font-bold tracking-tight">iPad</span>
-                <span class="font-headline-tile text-headline-tile italic font-light text-primary-container tracking-wider">air</span>
+                <span class="font-headline-tile text-headline-tile-mobile md:text-headline-tile text-on-secondary-fixed font-bold tracking-tight">iPad</span>
+                <span class="font-headline-tile text-headline-tile-mobile md:text-headline-tile italic font-light text-primary-container tracking-wider">air</span>
               </div>
               <p class="font-tagline-sm text-tagline-sm text-on-secondary-fixed-variant mt-2">
                 Ahora con los superpoderes del chip M4.
@@ -415,9 +415,9 @@
           </div>
 
           <!-- Bento Tile 4: AirPods Pro 3 (Clean White Minimal Studio) -->
-          <div class="group relative bg-surface-tile-light rounded-none md:rounded-lg overflow-hidden min-h-[580px] flex flex-col justify-between p-8 md:p-12 text-center transition-all duration-300">
+          <div class="group relative bg-surface-tile-light rounded-none md:rounded-lg overflow-hidden min-h-[480px] md:min-h-[580px] flex flex-col justify-between p-8 md:p-12 text-center transition-all duration-300">
             <div class="relative z-10 flex flex-col items-center">
-              <h3 class="font-headline-tile text-headline-tile text-on-secondary-fixed font-bold tracking-tight">
+              <h3 class="font-headline-tile text-headline-tile-mobile md:text-headline-tile text-on-secondary-fixed font-bold tracking-tight">
                 AirPods Pro 3
               </h3>
               <p class="font-tagline-sm text-tagline-sm text-on-secondary-fixed-variant mt-2 max-w-sm">
@@ -439,9 +439,9 @@
           </div>
 
           <!-- Bento Tile 5: MacBook Pro (Dark Titanium Theater) -->
-          <div class="group relative bg-surface-tile-dark rounded-none md:rounded-lg overflow-hidden min-h-[580px] flex flex-col justify-between p-8 md:p-12 text-center transition-all duration-300">
+          <div class="group relative bg-surface-tile-dark rounded-none md:rounded-lg overflow-hidden min-h-[480px] md:min-h-[580px] flex flex-col justify-between p-8 md:p-12 text-center transition-all duration-300">
             <div class="relative z-10 flex flex-col items-center">
-              <h3 class="font-headline-tile text-headline-tile text-text-primary font-bold tracking-tight">
+              <h3 class="font-headline-tile text-headline-tile-mobile md:text-headline-tile text-text-primary font-bold tracking-tight">
                 MacBook Pro
               </h3>
               <p class="font-tagline-sm text-tagline-sm text-on-surface-variant mt-2">
@@ -463,9 +463,9 @@
           </div>
 
           <!-- Bento Tile 6: iPad Pro (Deep Black OLED Luminescence) -->
-          <div class="group relative bg-surface-tile-dark rounded-none md:rounded-lg overflow-hidden min-h-[580px] flex flex-col justify-between p-8 md:p-12 text-center transition-all duration-300">
+          <div class="group relative bg-surface-tile-dark rounded-none md:rounded-lg overflow-hidden min-h-[480px] md:min-h-[580px] flex flex-col justify-between p-8 md:p-12 text-center transition-all duration-300">
             <div class="relative z-10 flex flex-col items-center">
-              <h3 class="font-headline-tile text-headline-tile text-text-primary font-bold tracking-tight">
+              <h3 class="font-headline-tile text-headline-tile-mobile md:text-headline-tile text-text-primary font-bold tracking-tight">
                 iPad Pro
               </h3>
               <p class="font-tagline-sm text-tagline-sm text-on-surface-variant mt-2 max-w-sm">
